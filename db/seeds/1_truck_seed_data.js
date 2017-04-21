@@ -12,7 +12,8 @@ exports.seed = function(knex) {
         food: 'Cuban',
         safety: 1,
         safety_url: '',
-        truck_pic: 'https://images.universe.com/59ec8cf8-7dff-4ec3-9998-4c7ec27880d9/-/format/jpeg/-/scale_crop/500x500/center/-/progressive/yes/-/inline/yes/'},
+        truck_pic: 'https://images.universe.com/59ec8cf8-7dff-4ec3-9998-4c7ec27880d9/-/format/jpeg/-/scale_crop/500x500/center/-/progressive/yes/-/inline/yes/'
+      },
       {
         id: 2,
         name: 'The Greatest American Gyro',

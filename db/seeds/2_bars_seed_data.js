@@ -7,7 +7,7 @@ exports.seed = function(knex, Promise) {
     // Inserts seed entries
     return knex('bars').insert([
       {
-        id: 1
+        id: 1,
         name: 'Fremont Brewing',
         address: '1050 N 34th St',
         city: 'Seattle',
@@ -18,12 +18,12 @@ exports.seed = function(knex, Promise) {
         liquor: false
       },
       {
-        id: 2
+        id: 2,
         name: 'Reuben\'s Brews',
         address: '5010 14th Ave NW',
         city: 'Seattle',
         state: 'WA',
-        zip: 9810 7,
+        zip: 98107,
         bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
         beer: true,
         liquor: false

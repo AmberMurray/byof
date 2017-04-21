@@ -7,13 +7,13 @@ exports.seed = function(knex, Promise) {
     // Inserts seed entries
     return knex('comments').insert([
       {
-        id: 1
+        id: 1,
         user_id: 5,
         truck_id: 2,
         review: 'This atmosphere rocks and the beers are tasty. This is comment id 1.'
       },
       {
-        id: 2
+        id: 2,
         user_id: 4,
         truck_id: 1,
         review: 'I ambushed you with a cup of coffee! This is comment id 2.'

@@ -7,12 +7,12 @@ exports.seed = function(knex, Promise) {
     // Inserts seed entries
     return knex('favorites').insert([
       {
-        id: 1
+        id: 1,
         user_id: 5,
         truck_id: 1,
       },
       {
-        id: 2
+        id: 2,
         user_id: 4,
         truck_id: 2,
       },
