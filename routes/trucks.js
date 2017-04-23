@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var knex = require('knex')
+var knex = require('../db/connection.js')
 
 // ===== GET ALL TRUCKS =====
   router.get('/', function(req, res, next) {
