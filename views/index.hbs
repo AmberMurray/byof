@@ -1,33 +1,34 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h3>index page</h3>
 <div class="row">
   <div class="col s12 m6">
     <div class="card">
-      <div class="card-image">
-        <div id="middle-image" class="card-image">
-          <div>
-            <img id="left-image" src="images/foodtruck2.jpg">
-          </div>
-          <span class="card-title">Food Trucks</span>
-        </div>
-
-        <!-- Modal Trigger -->
-        <button id="middle-item-link" data-target="modal1" class="material-icons btn-floating halfway-fab waves-effect waves-light red">&#x21aa</a>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-          </div>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img id="truck-image" class="activator" src="images/foodtruck2.jpg">
       </div>
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>All trucks here eventually</h4>
-            <p>Hope hope hope</p>
-          </div>
-          <div class="modal-footer">
-          </div>
-        </div>
-      </div> <!-- div class card -->
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Food Trucks<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Food Trucks<i class="material-icons right">more_vert</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
     </div>
   </div>
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img id="truck-image" class="activator" src="images/food.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">BYOF Places<i class="material-icons right"></i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">BYOF Places<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
+    </div>
+  </div>
+
 </div>
