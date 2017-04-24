@@ -7,11 +7,9 @@ var knex = require('../db/connection.js')
   console.log("In the GET all bars function")
   knex('bars').select('*')
   .then(bars => {
-    console.log('bars is ', bars)
     res.render('bars', { bars })
   })
 })
-
 
 // ===== GET ONE BAR =====
   router.get('/:id', function(req, res, next) {

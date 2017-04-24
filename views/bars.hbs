@@ -1,4 +1,3 @@
-<h3>This is the Get All Bars page</h3>
 <div class="container">
   {{#each bars}}
   <div class="row">
@@ -7,10 +6,14 @@
         alt="{{ this.name }}">
     </div>
     <div class="col-md-6">
-      <p>Name: {{ this.name }}</p>
-      <p>Address: {{ this.address }}</p>
-      <p>Serves beer?: {{ this.beer }}</p>
-      <p>Serves liquor?: {{ this.liquor }}</p>
+      <a href="/bars/{{this.id}}"><h5>{{ this.name }}</h5></a>
+      <p>{{ this.address }}</p>
+      {{#if this.beer}}
+        <p>Serves beer</p>
+      {{/if}}
+      {{#if this.liquor}}
+        <p>Serves liquor</p>
+      {{/if}}
     </div>
   </div>
   {{/each}}
