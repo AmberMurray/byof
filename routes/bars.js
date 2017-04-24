@@ -12,23 +12,6 @@ var knex = require('../db/connection.js')
   })
 })
 
-// ===== GET ONE BAR (SHOW PAGE) =====
-// router.get('/:id', (req, res, next) => {
-//   console.log("In the GET one bar function")
-//   var id = req.params.id
-//   console.log("req.params is ", req.param, '\n')
-//
-//   knex('bars')
-//   .select('*')
-//   .where({ id })
-//   .first()
-//   .then(bar => {
-//     res.render('show', { bar })
-//   })
-// })
-
-module.exports = router
-=======
 // ===== GET ONE BAR =====
   router.get('/:id', function(req, res, next) {
   console.log("In the GET one bar function")
@@ -43,5 +26,4 @@ module.exports = router
   })
 })
 
-module.exports = router;
->>>>>>> re-fixed the app.use for bars in app.js, redid bars get all route
+module.exports = router
