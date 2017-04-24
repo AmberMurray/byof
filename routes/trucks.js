@@ -6,8 +6,8 @@ var knex = require('../db/connection.js')
   router.get('/', function(req, res, next) {
   console.log("In the GET all trucks function")
   knex('trucks').select('*').then(trucks => {
-    console.log('inside the knex');
-    res.render('trucks', { title: 'ALL TRUCKS' })
+    console.log('trucks is ', trucks);
+    res.render('trucks', { trucks })
   })
 })
 

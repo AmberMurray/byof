@@ -1,14 +1,16 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h3>This is the Get All Trucks page</h3>
 <div class="container">
-  <!-- <h1>Get All Trucks Page</h1>
   {{#each trucks}}
   <div class="row">
     <div class="col-md-2">
+      <img src="{{ this.truck_pic }}"
+        alt="{{ this.name }}">
     </div>
     <div class="col-md-6">
       <p>Name: {{ this.name }}</p>
+      <p>Type of food: {{ this.food }}</p>
+      <p>Safety rating: {{ this.safety }}</p>
     </div>
   </div>
-  {{/each}} -->
+  {{/each}}
 </div>
