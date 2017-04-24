@@ -28,7 +28,7 @@ var knex = require('../db/connection.js')
 // })
 
 module.exports = router
-=======
+
 // ===== GET ONE BAR =====
   router.get('/:id', function(req, res, next) {
   console.log("In the GET one bar function")
