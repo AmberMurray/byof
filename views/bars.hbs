@@ -1,0 +1,17 @@
+<h3>This is the Get All Bars page</h3>
+<div class="container">
+  {{#each bars}}
+  <div class="row">
+    <div class="col-md-2">
+      <img src="{{ this.bar_pic }}"
+        alt="{{ this.name }}">
+    </div>
+    <div class="col-md-6">
+      <p>Name: {{ this.name }}</p>
+      <p>Address: {{ this.address }}</p>
+      <p>Serves beer?: {{ this.beer }}</p>
+      <p>Serves liquor?: {{ this.liquor }}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>
