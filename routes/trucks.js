@@ -16,13 +16,37 @@ var knex = require('../db/connection.js')
   router.get('/:id', function(req, res, next) {
   console.log("In the GET one truck function")
   var id = req.params.id
+
   knex('trucks')
   .select('*')
   .where('id', id)
   .first()
+  // .then(truck => {
+  //   console.log('in the first then', truck)
+  //   knex('comments')
+  //   .select('*')
+  //   .where('truck_id', id)
+  //   .returning('*')
+  // })
   .then(truck => {
-    console.log('truck is ', truck)
-    res.render('show_truck', { truck })
+    knex('comments')
+    .select('*')
+    .where('truck_id', truck.id)
+    .then(comments => {
+      console.log('comments is', comments)
+      console.log('comments.review is', comments.review)
+
+      console.log('truck is ', truck)
+      let truckWithReviews = {
+        name: truck.name,
+        food: truck.food,
+        safety: truck.safety,
+        truck_pic: truck.truck_pic,
+        reviews: comments
+      }
+      console.log('truckWithReviews is', truckWithReviews);
+      res.render('show_truck', { truckWithReviews })
+    })
   })
 })
 
