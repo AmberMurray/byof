@@ -3,15 +3,15 @@
 <div class="container">
   <div class="row">
     {{#each bars}}
-    <div class="col s3">
+    <div class="col s3 center-align">
       <img src="{{ this.bar_pic }}" class="responsive-img" alt="{{ this.name }}">
-      <a href="/bars/{{this.id}}" class="center-align"><h5>{{ this.name }}</h5></a>
-      <h6 class="center-align">{{ this.address }}</h6>
+      <a href="/bars/{{this.id}}"><h5>{{ this.name }}</h5></a>
+      <h6>{{ this.address }}</h6>
       {{#if this.beer}}
-      <h6 class="center-align">Serves BEER! 🍺</h6>
+      <h6>Serves BEER! 🍺</h6>
       {{/if}}
       {{#if this.liquor}}
-      <h6 class="center-align">Serves LIQUOR! 🍹</h6>
+      <h6>Serves LIQUOR! 🍹</h6>
       {{/if}}
       <div class="row"></div>
       <div class="row"></div>

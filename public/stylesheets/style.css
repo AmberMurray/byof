@@ -3,8 +3,11 @@ body {
   font: 14px Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+nav {
+  background-color: #5c6bc0;
+  width: 100%;
+  font-size: 15px;
+
 }
 
 .home_logo {

@@ -1,14 +1,18 @@
-<h3>SHOW ONE BAR</h3>
+
 <div class="container">
-  <h1>{{ bar.name }}</h1>
+<div class="row"></div>
+<div class="row"></div>
   <div class="row">
-    <div class="col-md-2">
-      <img src="{{ bar.bar_pic }}"
-        alt="{{ bar.name }}">
-    </div>
-    <div class="col-md-6">
-      <p>Address: {{ bar.address }}</p>
-      <p>Serves beer? {{ bar.beer }}</p>
-    </div>
+    <div class="col m6 offset-m3 center-align">
+      <h3>{{ bar.name }}</h3>
+      <img src="{{ bar.bar_pic }}"alt="{{ bar.name }}" class="responsive-img">
+      <h5>{{ bar.address }}</h5>
+      {{#if bar.beer}}
+      <h5>Serves BEER! 🍺</h5>
+      {{/if}}
+      {{#if bar.liquor}}
+      <h5>Serves LIQUOR! 🍹</h5>
+      {{/if}}
+  </div>
   </div>
 </div>
