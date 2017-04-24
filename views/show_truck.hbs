@@ -1,10 +1,9 @@
-<h3>SHOW ONE TRUCK</h3>
 <div class="container">
-  <h1>{{ truck.name }}</h1>
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-1">
+        <h3>{{ truck.name }}</h3>
       <img src="{{ truck.truck_pic }}"
-        alt="{{ truck.name }}">
+      alt="{{ truck.name }}">
     </div>
     <div class="col-md-6">
       <p>Food: {{ truck.food }}</p>
@@ -12,3 +11,5 @@
     </div>
   </div>
 </div>
+
+{{> _form}}
