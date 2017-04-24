@@ -26,4 +26,4 @@ var knex = require('../db/connection.js')
   })
 })
 
-module.exports = router;
+module.exports = router
