@@ -4,8 +4,7 @@
   <div class="row">
     {{#each trucks}}
     <div class="col s3">
-      <img src="{{ this.truck_pic }}"
-      alt="{{ this.name }}">
+      <img src="{{ this.truck_pic }}" alt="{{ this.name }}">
       <div class="row"></div>
       <a href="/trucks/{{this.id}}"><h5>{{ this.name }}</h5></a>
       <h6>Type of Food: {{ this.food }}</h6>

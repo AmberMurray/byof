@@ -13,7 +13,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98103,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: false
       },
@@ -24,7 +24,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98107,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: false
       },
@@ -35,7 +35,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98125,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: false
       },
@@ -46,7 +46,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98136,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: true
       },
@@ -57,7 +57,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98102,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: true
       },
@@ -68,7 +68,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98103,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: false
       },
@@ -79,7 +79,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98101,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: false
       },
@@ -90,7 +90,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98107,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: false
       },
@@ -101,7 +101,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98107,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: false
       },
@@ -112,7 +112,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98109,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: false,
         liquor: false
       },
@@ -123,7 +123,7 @@ exports.seed = function(knex, Promise) {
         city: 'Seattle',
         state: 'WA',
         zip: 98107,
-        bar_pic: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97500&w=500&h=150',
+        bar_pic: 'http://placehold.it/300x300',
         beer: true,
         liquor: true
       }

@@ -1,20 +1,21 @@
+<div class="row"></div>
+<div class="row"></div>
 <div class="container">
-  {{#each bars}}
   <div class="row">
-    <div class="col-md-2">
-      <img src="{{ this.bar_pic }}"
-        alt="{{ this.name }}">
-    </div>
-    <div class="col-md-6">
-      <a href="/bars/{{this.id}}"><h5>{{ this.name }}</h5></a>
-      <p>{{ this.address }}</p>
+    {{#each bars}}
+    <div class="col s3">
+      <img src="{{ this.bar_pic }}" class="responsive-img" alt="{{ this.name }}">
+      <a href="/bars/{{this.id}}" class="center-align"><h5>{{ this.name }}</h5></a>
+      <h6 class="center-align">{{ this.address }}</h6>
       {{#if this.beer}}
-        <p>Serves beer</p>
+      <h6 class="center-align">Serves BEER! 🍺</h6>
       {{/if}}
       {{#if this.liquor}}
-        <p>Serves liquor</p>
+      <h6 class="center-align">Serves LIQUOR! 🍹</h6>
       {{/if}}
+      <div class="row"></div>
+      <div class="row"></div>
     </div>
+    {{/each}}
   </div>
-  {{/each}}
 </div>
