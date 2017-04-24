@@ -21,13 +21,6 @@ var knex = require('../db/connection.js')
   .select('*')
   .where('id', id)
   .first()
-  // .then(truck => {
-  //   console.log('in the first then', truck)
-  //   knex('comments')
-  //   .select('*')
-  //   .where('truck_id', id)
-  //   .returning('*')
-  // })
   .then(truck => {
     knex('comments')
     .select('*')
@@ -35,13 +28,14 @@ var knex = require('../db/connection.js')
     .then(comments => {
       console.log('comments is', comments)
       console.log('comments.review is', comments.review)
-
       console.log('truck is ', truck)
+      
       let truckWithReviews = {
         name: truck.name,
         food: truck.food,
         safety: truck.safety,
         truck_pic: truck.truck_pic,
+        truckId: req.params.id,
         reviews: comments
       }
       console.log('truckWithReviews is', truckWithReviews);

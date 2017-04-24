@@ -10,7 +10,6 @@ var index = require('./routes/index')
 var trucks = require('./routes/trucks')
 var bars = require('./routes/bars')
 var comments = require('./routes/comments')
-
 var app = express()
 
 // view engine setup

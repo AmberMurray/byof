@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 var knex = require('../db/connection.js')
+
 
 // ===== AUTHORIZATION =====
 let authorize = function(req, res, next) {
