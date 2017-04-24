@@ -7,9 +7,23 @@ var knex = require('../db/connection.js')
   console.log("In the GET all trucks function")
   knex('trucks').select('*')
   .then(trucks => {
-    // console.log('trucks is ', trucks)
     res.render('trucks', { trucks })
   })
+})
+
+// ===== GET ALL BARS NEAR A PARTICULAR TRUCK =====
+  router.get('/:id/schedules', function(req, res, next) {
+  console.log("In the GET schedule function")
+  console.log("req.params.id is ", req.params.id)
+  id = req.params.id
+
+  knex('schedules').select('*')
+  .innerJoin('trucks', 'trucks.id', 'schedules.truck_id')
+   .where('schedules.truck_id', id)
+   .then(nearby => {
+     console.log('nearby is ', nearby)
+     res.send(nearby)
+   })
 })
 
 // ===== GET ONE TRUCK =====
@@ -26,10 +40,6 @@ var knex = require('../db/connection.js')
     .select('*')
     .where('truck_id', truck.id)
     .then(comments => {
-      console.log('comments is', comments)
-      console.log('comments.review is', comments.review)
-      console.log('truck is ', truck)
-      
       let truckWithReviews = {
         name: truck.name,
         food: truck.food,
@@ -38,7 +48,6 @@ var knex = require('../db/connection.js')
         truckId: req.params.id,
         reviews: comments
       }
-      console.log('truckWithReviews is', truckWithReviews);
       res.render('show_truck', { truckWithReviews })
     })
   })
