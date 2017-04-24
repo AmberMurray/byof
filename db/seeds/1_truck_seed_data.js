@@ -12,7 +12,7 @@ exports.seed = function(knex) {
         food: 'Cuban',
         safety: 1,
         safety_url: '',
-        truck_pic: 'https://images.universe.com/59ec8cf8-7dff-4ec3-9998-4c7ec27880d9/-/format/jpeg/-/scale_crop/500x500/center/-/progressive/yes/-/inline/yes/'
+        truck_pic: 'https://images.universe.com/59ec8cf8-7dff-4ec3-9998-4c7ec27880d9/-/format/jpeg/-/scale_crop/300x300/center/-/progressive/yes/-/inline/yes/'
       },
       {
         id: 2,
@@ -20,7 +20,7 @@ exports.seed = function(knex) {
         food: 'Greek',
         safety: 2,
         safety_url: '',
-        truck_pic: 'https://news.boisestate.edu/update/files/2016/08/food-truck.jpg'
+        truck_pic: 'https://www.usedvending.com/preview/0/4/23260_6_j_ico.jpg'
       },
       {
         id: 3,
@@ -28,7 +28,7 @@ exports.seed = function(knex) {
         food: 'Burgers',
         safety: 3,
         safety_url: '',
-        truck_pic: 'https://images.universe.com/93474d17-dc4d-417f-8784-b651e4ef903b/-/format/jpeg/-/scale_crop/500x500/center/-/progressive/yes/-/inline/yes/'
+        truck_pic: 'https://images.universe.com/93474d17-dc4d-417f-8784-b651e4ef903b/-/format/jpeg/-/scale_crop/300x300/center/-/progressive/yes/-/inline/yes/'
       },
       {
         id: 4,
@@ -36,7 +36,7 @@ exports.seed = function(knex) {
         food: 'American',
         safety: 5,
         safety_url: '',
-        truck_pic: 'https://c1.staticflickr.com/4/3853/15251753445_a9ba112e74_z.jpg'
+        truck_pic: 'http://wichitafoodtrucks.com/assets/images/trucks/truck-3.jpg'
       },
       {
         id: 5,
@@ -44,7 +44,7 @@ exports.seed = function(knex) {
         food: 'Asian',
         safety: 4,
         safety_url: '',
-        truck_pic: 'https://images-platform.99static.com/d_dUQHkOzhhkjKgdcAKRQFArSTM=/0x0:1860x1860/500x500/top/smart/99designs-contests-attachments/67/67155/attachment_67155482'
+        truck_pic: 'http://reginafarmersmarket.ca/tinthumb.php?src=userdata/listings/19812ba3d653c651255a33aaa1794202.jpg&h=300&w=300&q=100&zc=1'
       }
       ])
     })
