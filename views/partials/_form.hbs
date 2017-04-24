@@ -1,11 +1,12 @@
 <!-- ====== COMMENT FORM ====== -->
 <div class="container">
-  <form method="POST" action="/trucks/{{ truck.id}}" class="well">
+  <form method="POST" action="/comments" class="well">
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
           <label for="your-review">Your Review</label>
-          <input type="text" class="form-control" id="review-body" value= "{{ comments.review}}" name="review-body">
+          <input type="hidden" name="truck_id" value="{{ truckWithReviews.truckId }}">
+          <input type="text" class="form-control" id="review" value= "{{ comments.review}}" name="review">
         </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

@@ -35,14 +35,14 @@ router.post('/', (req, res, next) => {
   // let { userId } = req.session
   let comment = req.body
   let userId = 2
-  const addComment = { userId, truckId, review }
+  const addComment = { user_id: userId, truck_id: comment.truck_id, review: comment.review }
 
   knex('comments')
     .insert(addComment, '*')
     .then((rows) => {
       let comment = rows[0]
       console.log('adding a comment ', comment)
-      res.redirect('/', comment)
+      res.redirect(`/trucks/${comment.truck_id}` )
     })
     .catch((err) => {
       next(err)
