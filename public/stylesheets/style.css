@@ -16,3 +16,8 @@ nav {
   margin-top: 7px;
   margin-left: 20px;
 }
+
+input[type=text] {
+  border:  1px solid #9e9e9e;
+  height: 10rem;
+}

@@ -6,11 +6,12 @@
     <div class="col s8 m8 offset-m2">
       <form method="POST" action="/comments" class="well">
         <div class="form-group">
-          <label for="your-review">Your Review</label>
+
+          <label for="your-review"><i class="material-icons prefix">mode_edit</i></label>
           <input type="hidden" name="truck_id" value="{{ truckWithReviews.truckId }}">
           <input type="text" class="form-control" id="review" value= "{{ comments.review}}" name="review">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Share Your Thoughts</button>
       </form>
     </div>
   </div>
