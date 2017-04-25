@@ -5,6 +5,9 @@ exports.up = (knex) => {
     table.increments()
     table.string('user_name').notNullable()
     table.string('user_pic').notNullable()
+    table.string('user_email').notNullable().unique()
+    table.specificType('hashed_password', 'char(60)').notNullable()
+    table.timestamps(true, true)
   })
 }
 
