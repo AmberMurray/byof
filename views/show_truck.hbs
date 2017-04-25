@@ -1,13 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-2">
-      <img src="{{ truckWithReviews.truck_pic }}"
+      <img src="{{ truckWithReviews.comments[0].truck_pic }}"
         alt="{{ truckWithReviews.name }}">
     </div>
     <div class="col-md-6">
       <p>Food: {{ truckWithReviews.food }}</p>
       <p>Safety rating: {{ truckWithReviews.safety }}</p>
     </div>
+    {{#each nearby }}
+      <p>bar name{{ this.this.name }}</p>
+    {{/each}}
     {{#each truckWithReviews.reviews }}
       <p>Comments: {{ this.this.review }}</p>
     {{/each}}

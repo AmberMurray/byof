@@ -17,12 +17,13 @@ var knex = require('../db/connection.js')
   console.log("req.params.id is ", req.params.id)
   id = req.params.id
 
-  knex('schedules').select('*')
-  .innerJoin('trucks', 'trucks.id', 'schedules.truck_id')
+  knex('trucks').select('*')
+  .innerJoin('schedules', 'trucks.id', 'schedules.truck_id')
+  .innerJoin('bars', 'schedules.bar_id', 'bars.id')
    .where('schedules.truck_id', id)
    .then(nearby => {
      console.log('nearby is ', nearby)
-     res.send(nearby)
+     res.render('show_truck', nearby )
    })
 })
 
@@ -33,24 +34,29 @@ var knex = require('../db/connection.js')
 
   knex('trucks')
   .select('*')
-  .where('id', id)
-  .first()
-  .then(truck => {
-    knex('comments')
-    .select('*')
-    .where('truck_id', truck.id)
-    .then(comments => {
-      let truckWithReviews = {
-        name: truck.name,
-        food: truck.food,
-        safety: truck.safety,
-        truck_pic: truck.truck_pic,
-        truckId: req.params.id,
-        reviews: comments
-      }
-      res.render('show_truck', { truckWithReviews })
+  .innerJoin('schedules', 'trucks.id', 'schedules.truck_id')
+  .innerJoin('bars', 'schedules.bar_id', 'bars.id')
+  .where('schedules.truck_id', id)
+  // .then(truck => {
+  .then((bars) => {
+    return knex('comments')
+      .select('*')
+      .innerJoin('trucks', 'comments.truck_id', 'trucks.id')
+      .where('comments.truck_id', id)
+      .then((comments) => {
+        console.log('comments is', comments)
+        console.log('bars is', bars)
+        console.log()
+          let truckWithReviews = {
+            bars: bars,
+            comments: comments
+          }
+          console.log('truckWithReviews is ', truckWithReviews)
+          console.log('truckWithReview.comment etc', truckWithReviews.comments.truck_pic)
+          res.render('show_truck', { truckWithReviews })
+      })
     })
   })
-})
+
 
 module.exports = router
