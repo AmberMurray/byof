@@ -3,13 +3,13 @@
   <div class="row"></div>
   <div class="row">
     <div class="col m6 offset-m3 center-align">
-      <h3>{{truckWithReviews.name}}</h3>
-      <img src="{{ truckWithReviews.truck_pic }}"alt="{{ truckWithReviews.name }}">
-      <h5>Food: {{ truckWithReviews.food }}</h5>
-      <h6 class="red-text">Safety Rating: {{ truckWithReviews.safety }}</h6>
-      <!-- {{#each nearby }}
-      <h6>bar name{{ this.this.name }}</h6>
-      {{/each}} -->
+      <h3>{{monsterTruck.truckDeets.name}}</h3>
+      <img src="{{ monsterTruck.truckDeets.truck_pic }}"alt="{{ monsterTruck.truckDeets.name }}">
+      <h5>Food: {{ monsterTruck.truckDeets.food }}</h5>
+      <h6 class="red-text">Safety Rating: {{ monsterTruck.truckDeets.safety }}</h6>
+      {{#each monsterTruck.schedDeets }}
+      <h6>bar name{{ this.name }}</h6>
+      {{/each}}
     </div>
   </div>
 </div>
@@ -26,7 +26,7 @@
             </tr>
           </thead>
           <tbody>
-            {{#each truckWithReviews.reviews }}
+            {{#each monsterTruck.commentDeets.review }}
             <tr>
               <td>username</td>
               <td>{{ this.this.review }}</td>

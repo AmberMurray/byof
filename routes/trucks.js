@@ -31,33 +31,32 @@ var knex = require('../db/connection.js')
   router.get('/:id', function(req, res, next) {
   console.log("In the GET one truck function")
   var id = req.params.id
+  console.log('id is ', id);
 
-  let truckComments = knex('trucks').innerJoin('comments', 'comments.truck_id', 'trucks.id').where('comments.truck_id', id).returning('*')
+  let truckComments = knex('comments').where('truck_id', id)
+  .select('comments.review')
 
-  let truckSched =
-  knex('trucks')
-  .innerJoin('schedules', 'trucks.id', 'schedules.truck_id')
+  let truckSched = knex('schedules')
+  .innerJoin('bars', 'bars.id', 'schedules.bar_id')
+  // .select('*', 'bars.id as idBar', 'schedules.bar_id as idSched')
   .where('schedules.truck_id', id)
-  .then((result) => {
+  .select('bars.name')
 
-    console.log(' first results are ', result)
-    return knex('bars')
-    .innerJoin('schedules', 'schedules.bar_id', 'bars.id')
-    .returning('*')
-  })
+  let truckInfo = knex('trucks')
+  .where('trucks.id', id)
+  .select('*')
 
-  console.log('truckComments is ', truckComments)
-  console.log('truckSched is ', truckSched)
+Promise.all([truckComments, truckSched, truckInfo])
+.then((results) => {
+  let monsterTruck = {
+    commentDeets: results[0],
+    schedDeets: results[1],
+    truckDeets: results[2][0]
+  }
+  console.log('monster truck ', monsterTruck)
+  res.render('show_truck', {monsterTruck})
+})
 
-  Promise.all([truckComments, truckSched])
-    .then((other) => {
-      truckComments = other[0]
-      truckSchedule = other[1]
-
-      console.log('results', other);
-
-      res.send('hi')
-      })
-    })
+})
 
 module.exports = router
