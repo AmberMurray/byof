@@ -53,10 +53,10 @@ input[type=text] {
     background:rgba(255,255,255,.5);
 }
 
-.container:hover > .lower{
+.pic_box:hover > .lower{
     display:none;
 }
 
-.container:hover > .show{
+.pic_box:hover > .show{
     display:block;
 }
