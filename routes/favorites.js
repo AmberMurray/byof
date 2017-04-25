@@ -21,7 +21,6 @@ router.get('/favorites', authorize, (req, res, next) => {
   knex('favorites')
     .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
     .where('favorites.user_id', userId)
-    .orderBy('books.title', 'ASC')
     .then((favorites) => {
       res.json(favorites)
     })
@@ -52,6 +51,7 @@ router.get('/favorites/check', authorize, (req, res, next) => {
       next(err)
     })
 })
+
 // ====== ADD A TRUCK TO FAVORITES =====
 router.post('/favorites', authorize, (req, res, next) => {
   let { userId } = req.session
