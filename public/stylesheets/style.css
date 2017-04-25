@@ -19,10 +19,44 @@ nav {
 
 input {
   text-align: left;
-  
+
 }
 
 input[type=text] {
   border:  1px solid #9e9e9e;
   height: 10rem;
+}
+
+.pic_box {
+    width:250px;
+    height:300px;
+    /*background:#00f;*/
+    position:relative;
+}
+
+.lower {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    color:#fff;
+    padding:10px 0;
+    text-indent:5px;
+    background:rgba(0,0,0,.7);
+}
+
+.show {
+    display:none;
+    height:100%;
+    width:100%;
+    color:#000;
+    text-indent:5px;
+    background:rgba(255,255,255,.5);
+}
+
+.container:hover > .lower{
+    display:none;
+}
+
+.container:hover > .show{
+    display:block;
 }
