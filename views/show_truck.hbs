@@ -7,16 +7,36 @@
       <img src="{{ monsterTruck.truckDeets.truck_pic }}"alt="{{ monsterTruck.truckDeets.name }}">
       <h5>Food: {{ monsterTruck.truckDeets.food }}</h5>
       <h6 class="red-text">Safety Rating: {{ monsterTruck.truckDeets.safety }}</h6>
-      {{#each monsterTruck.schedDeets }}
-      <h6>bar name{{ this.name }}</h6>
-      {{/each}}
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col s8 m8 offset-m2">
+    <div class="col s8 m4 offset-m4">
+      <section>
+        <table class="responsive-table centered">
+          <thead>
+            <tr>
+              <th><h5>Bars I'm Visiting Today</h5></th>
+            </tr>
+          </thead>
+          <tbody>
+              {{#each monsterTruck.schedDeets }}
+            <tr>
+              <td>{{this.name}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col s8 m6 offset-m3">
       <section>
         <table class="highlight responsive-table">
           <thead>
@@ -26,10 +46,10 @@
             </tr>
           </thead>
           <tbody>
-            {{#each monsterTruck.commentDeets.review }}
+            {{#each monsterTruck.commentDeets}}
             <tr>
-              <td>username</td>
-              <td>{{ this.this.review }}</td>
+              <td>{{ this.user_id }}</td>
+              <td>{{ this.review }}</td>
             </tr>
             {{/each}}
           </tbody>

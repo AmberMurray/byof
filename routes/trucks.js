@@ -34,7 +34,7 @@ var knex = require('../db/connection.js')
   console.log('id is ', id);
 
   let truckComments = knex('comments').where('truck_id', id)
-  .select('comments.review')
+  .select('comments.review', 'comments.user_id')
 
   let truckSched = knex('schedules')
   .innerJoin('bars', 'bars.id', 'schedules.bar_id')
