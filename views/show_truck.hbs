@@ -1,17 +1,40 @@
 <div class="container">
+  <div class="row"></div>
+  <div class="row"></div>
   <div class="row">
-    <div class="col-md-2">
-      <img src="{{ truckWithReviews.truck_pic }}"
-        alt="{{ truckWithReviews.name }}">
+    <div class="col m6 offset-m3 center-align">
+      <h3>{{truckWithReviews.name}}</h3>
+      <img src="{{ truckWithReviews.truck_pic }}"alt="{{ truckWithReviews.name }}">
+      <h5>Food: {{ truckWithReviews.food }}</h5>
+      <h6 class="red-text">Safety Rating: {{ truckWithReviews.safety }}</h6>
     </div>
-    <div class="col-md-6">
-      <p>Food: {{ truckWithReviews.food }}</p>
-      <p>Safety rating: {{ truckWithReviews.safety }}</p>
-    </div>
-    {{#each truckWithReviews.reviews }}
-      <p>Comments: {{ this.this.review }}</p>
-    {{/each}}
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col s8 m8 offset-m2">
+      <section>
+        <table class="highlight responsive-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each truckWithReviews.reviews }}
+            <tr>
+              <td>username</td>
+              <td>{{ this.this.review }}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
+
 
 {{> _form}}
