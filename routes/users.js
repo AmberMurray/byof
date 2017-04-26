@@ -14,6 +14,7 @@ router.post('/users', (req, res, next) => {
     .insert({
       user_name: req.body.user_name,
       user_email: req.body.user_email,
+      user_pic: req.body.user_pic,
       hashed_password: hashed_password
     }, '*')
   })
