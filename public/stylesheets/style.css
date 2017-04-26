@@ -34,6 +34,13 @@ input[type=text] {
     position:relative;
 }
 
+.pic_box > img {
+    transition: opacity .5s, transform .5s;
+}
+.pic_box:hover > img {
+    opacity: .5;
+    transform: scale(1.1) rotate(360deg);
+}
 .lower {
     position:absolute;
     bottom:0;
