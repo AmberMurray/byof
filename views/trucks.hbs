@@ -1,21 +1,22 @@
 <div class="row"></div>
 <div class="row"></div>
 <div class="container">
-  <div class="row center-align">
+  <div class="row">
     {{#each trucks}}
-    <div class="pic-box col s3">
-      <a href="/trucks/{{this.id}}">
-        <img src="{{ this.truck_pic }}" alt="{{ this.name }}">
-        <div class="lower">
-          <h5>{{ this.name }}</h5></a>
-        </div>
-        <div class="show">
-          <a href="/trucks/{{this.id}}"><h5>{{ this.name }}</h5></a>
-          <h6>Type of Food: {{ this.food }}</h6>
-          <h6 class="red-text">Safety Rating: {{ this.safety }}</h6>
+    <div class="row col s3 center-align">
+      <div class="pic_box transform">
+        <a href="/trucks/{{this.id}}">
+          <img src="{{ this.truck_pic }}" alt="{{ this.name }}"></a>
+          <div class="lower">
+            <a href="/trucks/{{this.id}}"><h5>{{ this.name }}</h5></a>
+          </div>
+          <!-- <div class="show">
+            <a href="/trucks/{{this.id}}"><h5>{{ this.name }}</h5></a>
+            <h6>Type of Food: {{ this.food }}</h6>
+            <h6 class="red-text">Safety Rating: {{ this.safety }}</h6>
+          </div> -->
         </div>
       </div>
-
       {{/each}}
     </div>
     <br>

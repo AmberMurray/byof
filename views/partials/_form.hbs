@@ -8,8 +8,9 @@
         <div class="form-group">
 
           <label for="your-review"><i class="material-icons prefix">mode_edit</i></label>
-          <input type="hidden" name="truck_id" value="{{ truckWithReviews.truckId }}">
-          <input type="text" class="form-control" id="review" value= "{{ comments.review}}" name="review">
+          <input type="hidden" name="truck_id" value="{{ monsterTruck.truckDeets.id }}">
+          <!-- <input type="hidden" name="business_id" value="{{ monsterTruck.truckDeets.business_id }}"> -->
+          <input type="text" class="form-control" id="review" value= "{{ monsterTruck.commentDeets.review}}" name="review">
         </div>
         <button type="submit" class="btn btn-default">Share Your Thoughts</button>
       </form>

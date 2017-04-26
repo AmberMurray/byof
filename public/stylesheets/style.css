@@ -32,19 +32,21 @@ input[type=text] {
   height: 10rem;
 }
 
+.col.pic_box {
+  margin-bottom: 20px;
+}
 
-
-.pic-box{
+.pic_box{
   width:300px;
   max-height:300px;
   /*background:#00f;*/
   position:relative;
 }
 
-.pic_box > img {
+.transform > img {
   transition: opacity .5s, transform .5s;
 }
-.pic_box:hover > img {
+.transform:hover > img {
   opacity: .5;
   transform: scale(1.1) rotate(360deg);
 }
@@ -52,7 +54,7 @@ input[type=text] {
 .lower {
   position:absolute;
   bottom:0;
-  width:90%;
+  width: inherit;
   color:#fff;
   padding:10px 0;
   text-indent:5px;
@@ -68,10 +70,10 @@ input[type=text] {
   background:rgba(255,255,255,.5);
 }
 
-.pic_box:hover > .lower {
+/*.transform:hover > .lower {
     display:none;
 }
 
-.pic_box:hover > .show{
+.transform:hover > .show{
     display:block;
-}
+}*/
