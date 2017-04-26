@@ -43,13 +43,6 @@ input[type=text] {
   position:relative;
 }
 
-.transform > img {
-  transition: opacity .5s, transform .5s;
-}
-.transform:hover > img {
-  opacity: .5;
-  transform: scale(1.1) rotate(360deg);
-}
 
 .lower {
   position:absolute;
@@ -60,20 +53,3 @@ input[type=text] {
   text-indent:5px;
   background:rgba(0,0,0,.7);
 }
-
-.show{
-  display: none;
-  /*height:100%;
-  width:100%;*/
-  color:#000;
-  text-indent:5px;
-  background:rgba(255,255,255,.5);
-}
-
-/*.transform:hover > .lower {
-    display:none;
-}
-
-.transform:hover > .show{
-    display:block;
-}*/
