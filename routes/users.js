@@ -6,10 +6,12 @@ const bcrypt = require('bcrypt-as-promised')
 const router = express.Router()
 
 // ===== ADD A USER =====
-router.post('/users', (req, res, next) => {
+router.post('/', (req, res, next) => {
+  console.log('in the router add user');
   let pw = req.body.password
   bcrypt.hash(pw, 12)
   .then((hashed_password) => {
+    console.log('here in then');
     return knex('users')
     .insert({
       user_name: req.body.user_name,
