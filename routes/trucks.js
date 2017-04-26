@@ -1,6 +1,36 @@
 var express = require('express')
-var router = express.Router();
+var router = express.Router()
 var knex = require('../db/connection.js')
+// var fred = require('../public/javascripts/main.js')
+
+function makeCall(businessId) {
+  let queryRoot = 'https://data.kingcounty.gov/resource/gkhn-e8mn.json\?'
+  let queryParam = `Business_ID=${businessId}`
+  let fullQuery = queryRoot + queryParam
+  let testQuery = 'https://data.kingcounty.gov/resource/gkhn-e8mn.json?Business_ID=PR0084889'
+  console.log('fullQuery is ', fullQuery)
+  //
+  // // MAKE THE QUERY
+  // $.ajax ({
+  //   method: 'GET',
+  //   url: testQuery,
+  //
+  //   success: function(results)
+  //   {
+  //     let obj = results[0]
+  //     let businessDeets =
+  //     business_id: obj.business_id
+  //
+  //     console.log('results are ', results)
+  //   }, // success
+  //
+  //   error: function (error)
+  //   {
+  //     console.log('nope')
+  //   } // error
+  // }) // ajax
+  // return fullQuery
+} // function makeCall
 
 // ===== GET ALL TRUCKS =====
   router.get('/', function(req, res, next) {
@@ -31,7 +61,8 @@ var knex = require('../db/connection.js')
   router.get('/:id', function(req, res, next) {
   console.log("In the GET one truck function")
   var id = req.params.id
-  console.log('id is ', id);
+
+ makeCall(id)
 
   let truckComments = knex('comments').where('truck_id', id)
   .select('comments.review', 'comments.user_id')
