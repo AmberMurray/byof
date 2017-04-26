@@ -17,7 +17,7 @@ var comments = require('./routes/comments')
 var favorites = require('./routes/favorites')
 var users = require('./routes/users')
 var rp = require('request-promise')
-// var cookieSession = require('cookie-session')
+var cookieSession = require('cookie-session')
 var session = require('./routes/session')
 var app = express()
 
@@ -33,11 +33,11 @@ app.use(logger('dev'))
 app.use(methodOverride('_method'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-// app.use(cookieSession({
-//   name: 'byof_dev',
-//   secret: process.env.SESSION_SECRET,
-//   secure: app.get('env') === 'production'
-// }))
+app.use(cookieSession({
+  name: 'byof_dev',
+  secret: process.env.SESSION_SECRET,
+  secure: app.get('env') === 'production'
+}))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
