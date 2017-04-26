@@ -8,6 +8,7 @@ exports.up = (knex) => {
     table.integer('safety')
     table.string('safety_url')
     table.string('truck_pic').notNullable()
+    table.string('business_id').notNullable()
   })
 }
 
