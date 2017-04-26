@@ -1,13 +1,18 @@
 body {
   padding: 50px;
   font: 14px Arial, sans-serif;
+  letter-spacing: 0.16rem;
 }
 
 nav {
   background-color: #5c6bc0;
   width: 100%;
-  font-size: 15px;
+  font-size: 16px;
 
+}
+
+a {
+  color: #fff;
 }
 
 .home_logo {
@@ -27,9 +32,9 @@ input[type=text] {
   height: 10rem;
 }
 
-.pic_box {
-    width:250px;
-    height:300px;
+.pic-box{
+    width:300px;
+    max-height:300px;
     /*background:#00f;*/
     position:relative;
 }
@@ -41,6 +46,7 @@ input[type=text] {
     opacity: .5;
     transform: scale(1.1) rotate(360deg);
 }
+
 .lower {
     position:absolute;
     bottom:0;
@@ -51,19 +57,11 @@ input[type=text] {
     background:rgba(0,0,0,.7);
 }
 
-.show {
-    display:none;
-    height:100%;
-    width:100%;
+.show{
+    display: none;
+    /*height:100%;
+    width:100%;*/
     color:#000;
     text-indent:5px;
     background:rgba(255,255,255,.5);
-}
-
-.pic_box:hover > .lower{
-    display:none;
-}
-
-.pic_box:hover > .show{
-    display:block;
 }
