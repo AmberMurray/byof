@@ -5,7 +5,7 @@ const express = require('express')
 const knex = require('../db/connection')
 const router = express.Router()
 
-router.post('/session', (req, res, next) => {
+router.post('/', (req, res, next) => {
   const { email, password } = req.body
   if (!email || !email.trim()) {
     return next({
@@ -20,9 +20,9 @@ router.post('/session', (req, res, next) => {
     })
   }
 
-  let user
+  let user;
   knex('users')
-    .where('email', email)
+    .where('user_email', email)
     .first()
     .then((row) => {
       if (!row) {
@@ -36,8 +36,9 @@ router.post('/session', (req, res, next) => {
     })
     .then(() => {
       delete user.hashed_password
-      req.session.userId = user.id
-      res.json(user)
+      // req.session.userId = user.id
+      // res.json(user)
+      res.send(user)
     })
     .catch(bcrypt.MISMATCH_ERROR, () => {
       throw {
@@ -50,9 +51,9 @@ router.post('/session', (req, res, next) => {
     })
 })
 
-router.delete('/session', (req, res, next) => {
-  req.session = null
-  res.sendStatus(200)
-})
+// router.delete('/session', (req, res, next) => {
+//   req.session = null
+//   res.sendStatus(200)
+// })
 
 module.exports = router

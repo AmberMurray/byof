@@ -1,6 +1,6 @@
-// if (process.env.NODE_ENV !== 'production' && !process.env.IS_BUILD) {
-//   require('dotenv').config();
-// }
+if (process.env.NODE_ENV !== 'production' && !process.env.IS_BUILD) {
+  require('dotenv').config();
+}
 
 var express = require('express')
 var path = require('path')
@@ -18,7 +18,7 @@ var favorites = require('./routes/favorites')
 var users = require('./routes/users')
 var rp = require('request-promise')
 // var cookieSession = require('cookie-session')
-// var session = require('./routes/session')
+var session = require('./routes/session')
 var app = express()
 
 // app.disable('x-powered-by')
@@ -55,7 +55,7 @@ app.use('/bars', bars)
 app.use('/comments', comments)
 app.use('/users', users)
 app.use('/favorites', favorites)
-// app.use('/session', session)
+app.use('/session', session)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
