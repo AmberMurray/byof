@@ -7,6 +7,7 @@ const router = express.Router()
 
 router.post('/', (req, res, next) => {
   const { email, password } = req.body
+  console.log('req.body in the post is ', req.body);
   if (!email || !email.trim()) {
     return next({
       status: 400,
@@ -36,7 +37,7 @@ router.post('/', (req, res, next) => {
     })
     .then(() => {
       delete user.hashed_password
-      // req.session.userId = user.id
+      req.session.userId = user.id
       // res.json(user)
       res.send(user)
     })
