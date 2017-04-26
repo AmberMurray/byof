@@ -52,7 +52,7 @@ input[type=text] {
 }
 
 .col.pic_box {
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
 .pic_box{
@@ -76,4 +76,13 @@ input[type=text] {
 .btn {
   color: #FFFF00;
   background-color: #5c6bc0;
+}
+
+.hover-fun {
+  transition: opacity .5s, transform .5s;
+}
+
+.hover-fun:hover {
+  opacity: .5;
+  transform: scale(1.01);
 }
