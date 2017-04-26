@@ -3,19 +3,15 @@
 <div class="container">
   <div class="row">
     {{#each bars}}
-    <div class="col s3 center-align">
-      <img src="{{ this.bar_pic }}" class="responsive-img" alt="{{ this.name }}">
-      <a href="/bars/{{this.id}}"><h5>{{ this.name }}</h5></a>
-      <h6>{{ this.address }}</h6>
-      {{#if this.beer}}
-      <h6>Serves BEER! 🍺</h6>
-      {{/if}}
-      {{#if this.liquor}}
-      <h6>Serves LIQUOR! 🍹</h6>
-      {{/if}}
-      <div class="row"></div>
-      <div class="row"></div>
+    <div class="row col s3 center-align">
+      <div class="pic_box">
+        <a href="/bars/{{this.id}}"><img src="{{ this.bar_pic }}" class="responsive-img" alt="{{ this.name }}"></a>
+        <div class="lower">
+          <a href="/bars/{{this.id}}"><h5>{{ this.name }}</h5></a>
+        </div>
+      </div>
     </div>
     {{/each}}
   </div>
+  <br>
 </div>
