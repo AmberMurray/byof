@@ -54,9 +54,10 @@ router.post('/', (req, res, next) => {
     })
 })
 
-router.delete('/', (req, res, next) => {
+router.get('/logout', (req, res, next) => {
+  console.log('+++++++++++++++++++++');
   req.session = null
-  res.sendStatus(200)
+  res.redirect('/')
 })
 
 module.exports = router

@@ -18,8 +18,6 @@ let authorize = function(req, res, next) {
 // ===== GET FAVORITE TRUCKS =====
 router.get('/', authorize, (req, res, next) => {
   let { userId } = req.session
-  console.log('++++++++++++++++++=');
-
   knex('favorites')
     .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
     .where('favorites.user_id', userId)
