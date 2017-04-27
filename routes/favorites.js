@@ -6,6 +6,7 @@ var knex = require('../db/connection.js')
 // ===== AUTHORIZATION =====
 let authorize = function(req, res, next) {
   if (!req.session.userId) {
+
     return next({
       status: 401,
       message: 'Unauthorized'
@@ -17,6 +18,7 @@ let authorize = function(req, res, next) {
 // ===== GET FAVORITE TRUCKS =====
 router.get('/', authorize, (req, res, next) => {
   let { userId } = req.session
+
   knex('favorites')
     .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
     .where('favorites.user_id', userId)
@@ -56,9 +58,8 @@ router.get('/check', authorize, (req, res, next) => {
 router.post('/', authorize, (req, res, next) => {
   let { userId } = req.session
   let newFavorite = req.body.truck_id
-  console.log(newFavorite);
 
-knex('favorites')
+  knex('favorites')
   .insert({truck_id: newFavorite, user_id: userId}, "*")
   .returning(['id', 'truck_id', 'user_id'])
   .then((result) => {
