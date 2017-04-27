@@ -21,11 +21,19 @@ router.get('/:id', function(req, res, next) {
 
   let truckComments = knex('comments').where('truck_id', truckId)
   .select('comments.review', 'comments.user_id')
+  .innerJoin('users', 'users.id', 'comments.user_id')
+  .select('users.user_pic')
+
+  // let userAvatar = knex('trucks')
+  // .innerJoin('comments', 'truck_id', 'trucks.id')
+  // .where('truck_id', truckId)
+  // .innerJoin('users', 'comments.user_id', 'user.id')
+  // .select('*')
 
   let truckSched = knex('schedules')
   .innerJoin('bars', 'bars.id', 'schedules.bar_id')
   .where('schedules.truck_id', truckId)
-  .select('bars.name')
+  .select('bars.name', 'schedules.bar_id')
 
   let truckInfo = knex('trucks')
   .where('trucks.id', truckId)
@@ -60,8 +68,8 @@ router.get('/:id', function(req, res, next) {
         inspectionResult: results[3][0].inspection_result,
         inspectionDate: results[3][0].inspection_date
       }
-      console.log('monsterTruck ', monsterTruck)
-      console.log('monsterTruck.truckDeets.id is ', monsterTruck.truckDeets.id)
+      console.log('commentDeets is ', monsterTruck.commentDeets)
+      console.log('monsterTruck.schedDeets is ', monsterTruck.schedDeets)
 
       res.render('show_truck', {monsterTruck})
     })
