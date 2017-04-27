@@ -6,6 +6,7 @@ var rp = require('request-promise')
 // ===== GET ALL TRUCKS =====
 router.get('/', function(req, res, next) {
   knex('trucks').select('*')
+  .orderBy('name')
   .then(trucks => {
     res.render('trucks', { trucks })
   })
@@ -62,7 +63,9 @@ router.get('/:id', function(req, res, next) {
         inspectionResult: results[3][0].inspection_result,
         inspectionDate: results[3][0].inspection_date
       }
-      // console.log('monster truck ', monsterTruck)
+      console.log('monsterTruck ', monsterTruck)
+      console.log('monsterTruck.truckDeets.id is ', monsterTruck.truckDeets.id)
+
       res.render('show_truck', {monsterTruck})
     })
     .catch((err) => {

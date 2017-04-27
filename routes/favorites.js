@@ -61,6 +61,7 @@ router.get('/check', authorize, (req, res, next) => {
 router.post('/', authorize, (req, res, next) => {
   let { userId } = req.session
   // let userId = 5
+  console.log('req.body is ', req.body);
 
   let newFavorite = req.body
   let newFavId = req.body.truck_id
