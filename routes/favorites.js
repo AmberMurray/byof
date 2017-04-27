@@ -5,8 +5,8 @@ var knex = require('../db/connection.js')
 
 // ===== AUTHORIZATION =====
 let authorize = function(req, res, next) {
+  console.log(req.session.userId);
   if (!req.session.userId) {
-
     return next({
       status: 401,
       message: 'Unauthorized'
@@ -18,6 +18,8 @@ let authorize = function(req, res, next) {
 // ===== GET FAVORITE TRUCKS =====
 router.get('/', authorize, (req, res, next) => {
   let { userId } = req.session
+  console.log(req.session);
+
   knex('favorites')
     .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
     .where('favorites.user_id', userId)
