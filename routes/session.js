@@ -5,9 +5,10 @@ const express = require('express')
 const knex = require('../db/connection')
 const router = express.Router()
 
-router.post('/', (req, res, next) => {
-  const { email, password } = req.body
-  console.log('req.body in the post is ', req.body)
+router.get('/', (req, res, next) => {
+  console.log('req.query in the post is ', req.query)
+  let email = req.query.user_email
+  let password = req.query.user_password
 
   if (!email || !email.trim()) {
     return next({
@@ -29,10 +30,12 @@ router.post('/', (req, res, next) => {
     .first()
     .then((row) => {
       if (!row) {
-        throw {
-          status: 400,
-          message: 'Bad email or password'
-        }
+        // throw {
+        //   status: 400,
+        //   message: 'Bad email or password'
+        // }
+        console.log('got here');
+        res.redirect('/login')
       }
       user = row
       return bcrypt.compare(password, user.hashed_password)
