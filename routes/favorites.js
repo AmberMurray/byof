@@ -16,16 +16,11 @@ let authorize = function(req, res, next) {
 
 // ===== GET FAVORITE TRUCKS =====
 router.get('/', authorize, (req, res, next) => {
-
   let { userId } = req.session
-  // let userId = 9
-  console.log('userId is ', userId);
-
   knex('favorites')
     .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
     .where('favorites.user_id', userId)
     .then((favorites) => {
-      console.log('favorites is ', favorites);
       res.render('favorites', { favorites })
     })
     .catch((err) => {
@@ -60,18 +55,15 @@ router.get('/check', authorize, (req, res, next) => {
 // ====== ADD A TRUCK TO FAVORITES =====
 router.post('/', authorize, (req, res, next) => {
   let { userId } = req.session
-  // let userId = 5
-  console.log('req.body is ', req.body);
-
-  let newFavorite = req.body
-  let newFavId = req.body.truck_id
+  let newFavorite = req.body.truck_id
+  console.log(newFavorite);
 
 knex('favorites')
-  .insert({truck_id: newFavId, user_id: userId}, "*")
+  .insert({truck_id: newFavorite, user_id: userId}, "*")
   .returning(['id', 'truck_id', 'user_id'])
   .then((result) => {
     let sendBack = result[0]
-    res.status(200).json(sendBack)
+    res.redirect('/favorites')
   })
   .catch((err) => {
     next(err)
