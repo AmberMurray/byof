@@ -68,6 +68,10 @@ box-shadow: 0 1px 0 0 #2196f3;
   background:rgba(91,105,195,0.8);
 }
 
+.favorite-list a {
+  color: #5c6bc0
+}
+
 .btn {
   color: #FFFF00;
   background-color: #5c6bc0;

@@ -18,6 +18,7 @@ let authorize = function(req, res, next) {
 // ===== GET FAVORITE TRUCKS =====
 router.get('/', authorize, (req, res, next) => {
   let { userId } = req.session
+  console.log('++++++++++++++++++=');
 
   knex('favorites')
     .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
@@ -33,7 +34,6 @@ router.get('/', authorize, (req, res, next) => {
 // ===== CHECK TO SEE IF TRUCK IS A FAVORITE =====
 router.get('/check', authorize, (req, res, next) => {
   let { userId } = req.session
-  // let userId = 5
   let query = req.query
   let queryId = req.query.id
 
@@ -74,9 +74,10 @@ router.post('/', authorize, (req, res, next) => {
 // ====== DELETE A TRUCK FROM FAVORITES LIST =====
 router.delete('/:id', authorize, (req, res, next) => {
   let { userId } = req.session
-  // let userId = 5
-  let toBeRemoved = req.body
-  let id = req.body.truck_id
+  console.log(userId);
+  console.log(req.params.id);
+  let id = req.params.id
+  console.log(id);
 
   if (!userId) {
     return next({
@@ -89,7 +90,8 @@ router.delete('/:id', authorize, (req, res, next) => {
     .delete()
     .returning(['truck_id', 'user_id'])
     .then((result) => {
-      res.json(result[0])
+
+      res.redirect('/favorites')
     })
 })
 

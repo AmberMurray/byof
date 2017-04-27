@@ -8,10 +8,10 @@
       <div class="card">
         <div class="card-image">
           <img class="responsive-img" src="{{ monsterTruck.truckDeets.truck_pic }}"alt="{{ monsterTruck.truckDeets.name }}">
-          <form method="POST" action="/favorites"  class="well">
-          <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red"><i class="material-icons">favorite</i>
-          </button>
-        </form>
+          <form method="POST" action="/favorites">
+            <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red"><i class="material-icons">favorite</i>
+            </button>
+          </form>
         </div>
       </div>
     </div>
