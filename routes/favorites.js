@@ -4,18 +4,18 @@ var knex = require('../db/connection.js')
 
 
 // ===== AUTHORIZATION =====
-// let authorize = function(req, res, next) {
-//   if (!req.session.userId) {
-//     return next({
-//       status: 401,
-//       message: 'Unauthorized'
-//     })
-//   }
-//   next()
-// }
+let authorize = function(req, res, next) {
+  if (!req.session.userId) {
+    return next({
+      status: 401,
+      message: 'Unauthorized'
+    })
+  }
+  next()
+}
 
 // ===== GET FAVORITE TRUCKS =====
-router.get('/', (req, res, next) => {
+router.get('/', authorize, (req, res, next) => {
 
   let { userId } = req.session
   // let userId = 9
@@ -34,7 +34,7 @@ router.get('/', (req, res, next) => {
 })
 
 // ===== CHECK TO SEE IF TRUCK IS A FAVORITE =====
-router.get('/check', (req, res, next) => {
+router.get('/check', authorize, (req, res, next) => {
   let { userId } = req.session
   // let userId = 5
   let query = req.query
@@ -58,7 +58,7 @@ router.get('/check', (req, res, next) => {
 })
 
 // ====== ADD A TRUCK TO FAVORITES =====
-router.post('/', (req, res, next) => {
+router.post('/', authorize, (req, res, next) => {
   let { userId } = req.session
   // let userId = 5
 
@@ -78,7 +78,7 @@ knex('favorites')
 })
 
 // ====== DELETE A TRUCK FROM FAVORITES LIST =====
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', authorize, (req, res, next) => {
   let { userId } = req.session
   // let userId = 5
   let toBeRemoved = req.body
