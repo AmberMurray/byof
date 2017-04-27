@@ -58,7 +58,7 @@ exports.seed = function(knex) {
         safety: 1,
         safety_url: '',
         truck_pic: 'http://www.chinatrucksupplier.com/upfile/large/Foton-mobile-fast-food-truck-price_7.jpg',
-        business_id: 'PR0071057'
+        business_id: 'PR0082466'
       },
       {
         id: 7,
@@ -67,7 +67,7 @@ exports.seed = function(knex) {
         safety: 3,
         safety_url: '',
         truck_pic: 'http://www.atlantamagazine.com/wp-content/uploads/sites/12/2014/01/117WH-6-cc-photosize--300x300.jpeg',
-        business_id: 'PR0071057'
+        business_id: 'PR0082190'
       },
       {
         id: 8,
@@ -76,7 +76,7 @@ exports.seed = function(knex) {
         safety: 2,
         safety_url: '',
         truck_pic: 'http://foodies.blogs.starnewsonline.com/files/2012/10/FAB-300x300.jpg',
-        business_id: 'PR0071057'
+        business_id: 'PR0072318'
       },
       {
         id: 9,
@@ -85,7 +85,7 @@ exports.seed = function(knex) {
         safety: 1,
         safety_url: '',
         truck_pic: 'https://roaminghunger.com/img/trucks/m_detail/4cdb42eb-21d8-4e42-b377-6dc946204482.jpg',
-        business_id: 'PR0071057'
+        business_id: 'PR0081233'
       },
       {
         id: 10,
@@ -94,7 +94,7 @@ exports.seed = function(knex) {
         safety: 5,
         safety_url: '',
         truck_pic: 'http://cdn-image.travelandleisure.com/sites/default/files/styles/image_300x300/public/local-experts-maui-top-food-trucks.jpg?itok=13pB-6VN',
-        business_id: 'PR0071057'
+        business_id: 'PR0079520'
       },
       {
         id: 11,
@@ -103,7 +103,7 @@ exports.seed = function(knex) {
         safety: 4,
         safety_url: '',
         truck_pic: 'http://image.made-in-china.com/43f34j00bsCaEwZhAlgc/New-Product-Ice-Cream-Cold-Drink-Food-Truck-Food-Van.jpg',
-        business_id: 'PR0071057'
+        business_id: 'PR0081569'
       },
       {
         id: 12,
@@ -112,7 +112,7 @@ exports.seed = function(knex) {
         safety: 3,
         safety_url: '',
         truck_pic: 'https://www.caldwellhouse.com/wp-content/uploads/food-truck.jpg',
-        business_id: 'PR0071057'
+        business_id: 'PR0082249'
       },
       {
         id: 13,
@@ -121,7 +121,7 @@ exports.seed = function(knex) {
         safety: 4,
         safety_url: '',
         truck_pic: 'https://www.usedvending.com/preview/e/e/21238_1_j_ico.jpg',
-        business_id: 'PR0071057'
+        business_id: 'PR0079304'
       },
       {
         id: 14,
@@ -130,7 +130,7 @@ exports.seed = function(knex) {
         safety: 4,
         safety_url: '',
         truck_pic: 'https://thesquarepdx.org/wp-content/uploads/2017/01/VooDoo-Web.jpg',
-        business_id: 'PR0071057'
+        business_id: 'PR0082252'
       }
       ])
     })
