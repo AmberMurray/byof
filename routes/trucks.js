@@ -56,12 +56,13 @@ router.get('/:id', function(req, res, next) {
 
     Promise.all([truckComments, truckSched, truckInfo, sodaQuery])
     .then((results) => {
+      let uglyDate = results[3][0].inspection_date
       let monsterTruck = {
         commentDeets: results[0],
         schedDeets: results[1],
         truckDeets: results[2][0],
         inspectionResult: results[3][0].inspection_result,
-        inspectionDate: results[3][0].inspection_date
+        inspectionDate: uglyDate.slice(0, 10)
       }
       console.log('inspectionDate is ', monsterTruck.inspectionDate)
 
