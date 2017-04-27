@@ -25,6 +25,7 @@ nav ul li a {
 
 a {
   color: #FFF;
+  font-weight: bolder;
 }
 
 .home_logo {
@@ -72,7 +73,7 @@ box-shadow: 0 1px 0 0 #2196f3;
   color:#fff;
   padding:10px 0;
   text-indent:5px;
-  background:rgba(0,0,0,.7);
+  background:rgba(91,105,195,0.6);
 }
 
 .btn {
