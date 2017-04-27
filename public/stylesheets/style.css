@@ -25,7 +25,6 @@ nav ul li a {
 
 a {
   color: #FFF;
-  font-weight: bolder;
 }
 
 .home_logo {
@@ -65,7 +64,6 @@ box-shadow: 0 1px 0 0 #2196f3;
   position:relative;
 }
 
-
 .lower {
   position:absolute;
   bottom:0;
@@ -88,4 +86,8 @@ box-shadow: 0 1px 0 0 #2196f3;
 .hover-fun:hover {
   opacity: .5;
   transform: scale(1.01);
+}
+
+table {
+  background-color: #FFF;
 }
