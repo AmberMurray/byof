@@ -58,7 +58,77 @@ exports.seed = function(knex, Promise) {
       },
       {
         id: 11,
-        user_id: 5,
+        user_id: 4,
+        truck_id: 6,
+      },
+      {
+        id: 12,
+        user_id: 4,
+        truck_id: 7,
+      },
+      {
+        id: 13,
+        user_id: 4,
+        truck_id: 8,
+      },
+      {
+        id: 14,
+        user_id: 1,
+        truck_id: 13,
+      },
+      {
+        id: 15,
+        user_id: 13,
+        truck_id: 4,
+      },
+      {
+        id: 16,
+        user_id: 9,
+        truck_id: 1,
+      },
+      {
+        id: 17,
+        user_id: 12,
+        truck_id: 5,
+      },
+      {
+        id: 18,
+        user_id: 12,
+        truck_id: 11,
+      },
+      {
+        id: 19,
+        user_id: 6,
+        truck_id: 11,
+      },
+      {
+        id: 20,
+        user_id: 6,
+        truck_id: 10,
+      },
+      {
+        id: 21,
+        user_id: 7,
+        truck_id: 9,
+      },
+      {
+        id: 22,
+        user_id: 9,
+        truck_id: 7,
+      },
+      {
+        id: 23,
+        user_id: 10,
+        truck_id: 6,
+      },
+      {
+        id: 24,
+        user_id: 11,
+        truck_id: 5,
+      },
+      {
+        id: 25,
+        user_id: 12,
         truck_id: 3,
       }
     ])
