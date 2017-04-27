@@ -27,10 +27,10 @@
               <td>Food</td>
               <td>{{ monsterTruck.truckDeets.food }}</td>
             </tr>
-            <!-- <tr>
+            <tr>
             <td>Last Inspection</td>
             <td class="red-text">{{ monsterTruck.inspectionDate }}</td>
-          </tr> -->
+          </tr>
           <tr>
             <td >Inspection Result</td>
             <td class="red-text">{{ monsterTruck.inspectionResult }}</td>
@@ -72,7 +72,8 @@
       <section>
         <table class="highlight responsive-table">
           <thead class="center-align">
-            <tr>
+            <tr
+              <th></th>
               <th>User</th>
               <th>Review</th>
             </tr>
@@ -80,8 +81,8 @@
           <tbody>
             {{#each monsterTruck.commentDeets}}
             <tr>
+              <td><img src="{{ this.user_pic }}"alt="{{ this.user_name }}"></td>
               <td>{{ this.user_name }}</td>
-              <td>{{ this.user_pic }}</td>
               <td>{{ this.review }}</td>
             </tr>
             {{/each}}
