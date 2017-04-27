@@ -7,10 +7,11 @@ var knex = require('../db/connection.js')
 let authorize = function(req, res, next) {
   console.log(req.session.userId);
   if (!req.session.userId) {
-    return next({
-      status: 401,
-      message: 'Unauthorized'
-    })
+    res.redirect('/login')
+    // return next({
+    //   status: 401,
+    //   message: 'Unauthorized'
+    // })
   }
   next()
 }

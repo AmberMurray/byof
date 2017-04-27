@@ -17,7 +17,6 @@ router.get('/', function(req, res, next) {
 
 // ===== GET ONE TRUCK =====
 router.get('/:id', function(req, res, next) {
-  // console.log("In the GET one truck function")
   var truckId = req.params.id
 
   let truckComments = knex('comments').where('truck_id', truckId)
@@ -54,8 +53,6 @@ router.get('/:id', function(req, res, next) {
 
     Promise.all([truckComments, truckSched, truckInfo, sodaQuery])
     .then((results) => {
-      // console.log('results', results)
-
       let monsterTruck = {
         commentDeets: results[0],
         schedDeets: results[1],

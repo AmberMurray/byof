@@ -15,14 +15,14 @@ var trucks = require('./routes/trucks')
 var bars = require('./routes/bars')
 var comments = require('./routes/comments')
 var favorites = require('./routes/favorites')
-var users = require('./routes/users')
+// var users = require('./routes/users')
 var login = require('./routes/login')
 var rp = require('request-promise')
 var cookieSession = require('cookie-session')
 var session = require('./routes/session')
 var app = express()
 
-// app.disable('x-powered-by')
+app.disable('x-powered-by')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
@@ -42,23 +42,17 @@ app.use(cookieSession({
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-// CSRF protection
-// app.use((req, res, next) => {
-//   if (/json/.test(req.get('Accept'))) {
-//     return next();
-//   }
-//   res.sendStatus(406)
-// })
-
 app.use('/', index)
 app.use('/trucks', trucks)
 app.use('/bars', bars)
 app.use('/comments', comments)
-app.use('/users', users)
+// app.use('/users', users)
 app.use('/favorites', favorites)
 app.use('/session', session)
 app.use('/login', login)
 
+
+// ===== ERROR HANDLING =====
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found')
