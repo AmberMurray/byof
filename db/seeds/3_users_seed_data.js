@@ -36,9 +36,65 @@ exports.seed = function(knex) {
       },
       {
         id: 5,
-        user_name: 'lovemesomegrub',
+        user_name: '2muchfreetime',
+        user_pic: 'https://images-na.ssl-images-amazon.com/images/I/51SeGTnbVlL._SS40_.jpg',
+        user_email: 'ihavenolife@comcast.net',
+        hashed_password: '$2a$12$JM0YBEYybzhvTu71AWVNfeOdtIt.Dwps9W/xf9Q4B3onm0n.u6X0O'
+      },
+      {
+        id: 6,
+        user_name: 'mom2five',
+        user_pic: 'https://i0.wp.com/jdgreening.files.wordpress.com/2017/02/mullet-hairstyle.jpg?resize=40%2C40&ssl=1',
+        user_email: 'fivekids@stuff.org',
+        hashed_password: '$2a$12$JM0YBEYybzhvTu71AWVNfeOdtIt.Dwps9W/xf9Q4B3onm0n.u6X0O'
+      },
+      {
+        id: 7,
+        user_name: 'iheartpuppies',
+        user_pic: 'http://www.rkomedia.net/wp-content/uploads/ktz/mullet-haircuts-cool-32o066m2hp48rkxoonmive.jpg',
+        user_email: 'joeschmo@somedomain.net',
+        hashed_password: '$2a$12$JM0YBEYybzhvTu71AWVNfeOdtIt.Dwps9W/xf9Q4B3onm0n.u6X0O'
+      },
+      {
+        id: 8,
+        user_name: 'qwerty',
+        user_pic: 'https://wfmu.org/Gfx/user_images/72_Mullet_3572404794909106_pc.jpg',
+        user_email: 'qwerty6@urochester.edu',
+        hashed_password: '$2a$12$JM0YBEYybzhvTu71AWVNfeOdtIt.Dwps9W/xf9Q4B3onm0n.u6X0O'
+      },
+      {
+        id: 9,
+        user_name: 'reviewsare4me',
+        user_pic: 'https://us.v-cdn.net/5020142/uploads/userpics/429/n7E6C1YL83PNS.jpg',
+        user_email: 'ovcalhoun@babson.edu',
+        hashed_password: '$2a$12$JM0YBEYybzhvTu71AWVNfeOdtIt.Dwps9W/xf9Q4B3onm0n.u6X0O'
+      },
+      {
+        id: 10,
+        user_name: 'somebody',
+        user_pic: 'https://1.gravatar.com/avatar/489ca974a9d84e6e52f35e79254f850a?s=40&d=identicon&r=G',
+        user_email: 'thisisaword@notredame.edu',
+        hashed_password: '$2a$12$JM0YBEYybzhvTu71AWVNfeOdtIt.Dwps9W/xf9Q4B3onm0n.u6X0O'
+      },
+      {
+        id: 11,
+        user_name: 'greenfood4u',
+        user_pic: 'https://i1.wp.com/awakeblackwoman.files.wordpress.com/2013/10/locs-and-twist-curl.jpg?resize=40%2C40',
+        user_email: 'saltyhash@bcrypt.net',
+        hashed_password: '$2a$12$JM0YBEYybzhvTu71AWVNfeOdtIt.Dwps9W/xf9Q4B3onm0n.u6X0O'
+      },
+      {
+        id: 12,
+        user_name: 'mrrochester',
+        user_pic: 'https://a.ppy.sh/4575676?1428151740.png',
+        user_email: 'cbronte@gmail.com',
+        hashed_password: '$2a$12$JM0YBEYybzhvTu71AWVNfeOdtIt.Dwps9W/xf9Q4B3onm0n.u6X0O'
+      },
+      {
+        id: 13,
+        user_name: 'mrthornton',
         user_pic: 'https://www.potterforums.com/download/file.php?avatar=18783_1358727137.png',
-        user_email: 'grubby1@outlook.com',
+        user_email: 'maggiehale@milton.org',
         hashed_password: '$2a$12$LWkZKbe/SuwjeL7rVMGUSugxouvQcx5RAxpiUgBXy9XVBfrb2SzeO'
       }
       ])

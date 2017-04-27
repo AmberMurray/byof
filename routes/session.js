@@ -38,8 +38,8 @@ router.post('/', (req, res, next) => {
     .then(() => {
       delete user.hashed_password
       req.session.userId = user.id
-      // res.json(user)
-      res.send(user)
+      console.log('in the session post route ');
+      res.redirect('trucks')
     })
     .catch(bcrypt.MISMATCH_ERROR, () => {
       throw {
