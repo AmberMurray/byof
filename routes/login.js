@@ -5,6 +5,7 @@ var knex = require('../db/connection.js')
 
 //SHOW LOGIN PAGE
 router.get('/', function(req, res, next) {
+  console.log('===============');
     res.render('login')
 })
 
