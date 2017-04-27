@@ -24,12 +24,6 @@ router.get('/:id', function(req, res, next) {
   .innerJoin('users', 'users.id', 'comments.user_id')
   .select('users.user_pic', 'users.user_name')
 
-  // let userAvatar = knex('trucks')
-  // .innerJoin('comments', 'truck_id', 'trucks.id')
-  // .where('truck_id', truckId)
-  // .innerJoin('users', 'comments.user_id', 'user.id')
-  // .select('*')
-
   let truckSched = knex('schedules')
   .innerJoin('bars', 'bars.id', 'schedules.bar_id')
   .where('schedules.truck_id', truckId)
@@ -51,6 +45,7 @@ router.get('/:id', function(req, res, next) {
     let queryRoot = 'https://data.kingcounty.gov/resource/gkhn-e8mn.json\?'
     let queryParam = `Business_ID=${businessId}`
     let fullQuery = queryRoot + queryParam
+    console.log('fullquery is ', fullQuery)
 
     // make the query
     const sodaQuery = rp({
@@ -68,8 +63,7 @@ router.get('/:id', function(req, res, next) {
         inspectionResult: results[3][0].inspection_result,
         inspectionDate: results[3][0].inspection_date
       }
-      console.log('commentDeets is ', monsterTruck.commentDeets)
-      console.log('monsterTruck.schedDeets is ', monsterTruck.schedDeets)
+      console.log('inspectionDate is ', monsterTruck.inspectionDate)
 
       res.render('show_truck', {monsterTruck})
     })
