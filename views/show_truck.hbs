@@ -68,11 +68,11 @@
 
 <div class="container">
   <div class="row">
-    <div class="col s8 m6 offset-m3">
+    <div class="col s8 m8 offset-m2">
       <section>
         <table class="highlight responsive-table">
           <thead class="center-align">
-            <tr
+            <tr>
               <th></th>
               <th>User</th>
               <th>Review</th>
@@ -81,7 +81,7 @@
           <tbody>
             {{#each monsterTruck.commentDeets}}
             <tr>
-              <td><img src="{{ this.user_pic }}"alt="{{ this.user_name }}"></td>
+              <td><img class="review-avatars" src="{{ this.user_pic }}"alt="{{ this.user_name }}"></td>
               <td>{{ this.user_name }}</td>
               <td>{{ this.review }}</td>
             </tr>

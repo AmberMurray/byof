@@ -110,3 +110,8 @@ table td a {
 input::placeholder {
   color: #646668;
 }
+
+td img {
+  height: 50px;
+  width: 50px;
+}
