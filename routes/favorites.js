@@ -16,8 +16,10 @@ var knex = require('../db/connection.js')
 
 // ===== GET FAVORITE TRUCKS =====
 router.get('/', (req, res, next) => {
-  // let { userId } = req.session
-  let userId = 5
+
+  let { userId } = req.session
+  // let userId = 9
+  console.log('userId is ', userId);
 
   knex('favorites')
     .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
