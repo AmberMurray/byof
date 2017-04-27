@@ -16,6 +16,7 @@ var bars = require('./routes/bars')
 var comments = require('./routes/comments')
 var favorites = require('./routes/favorites')
 var users = require('./routes/users')
+var login = require('./routes/login')
 var rp = require('request-promise')
 var cookieSession = require('cookie-session')
 var session = require('./routes/session')
@@ -56,6 +57,7 @@ app.use('/comments', comments)
 app.use('/users', users)
 app.use('/favorites', favorites)
 app.use('/session', session)
+app.use('/login', login)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
