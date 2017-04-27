@@ -9,6 +9,9 @@ var knex = require('../db/connection.js')
   .then(bars => {
     res.render('bars', { bars })
   })
+  .catch((err) => {
+    next(err)
+  })
 })
 
 // ===== GET ONE BAR =====
@@ -22,6 +25,9 @@ var knex = require('../db/connection.js')
   .then(bar => {
     console.log('bar is ', bar)
     res.render('show_bar', { bar })
+  })
+  .catch((err) => {
+    next(err)
   })
 })
 

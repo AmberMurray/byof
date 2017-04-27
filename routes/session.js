@@ -7,13 +7,15 @@ const router = express.Router()
 
 router.post('/', (req, res, next) => {
   const { email, password } = req.body
-  console.log('req.body in the post is ', req.body);
+  console.log('req.body in the post is ', req.body)
+
   if (!email || !email.trim()) {
     return next({
       status: 400,
       message: 'Please enter a valid email address.'
     })
   }
+
   if (!password) {
     return next({
       status: 400,
@@ -52,9 +54,9 @@ router.post('/', (req, res, next) => {
     })
 })
 
-// router.delete('/session', (req, res, next) => {
-//   req.session = null
-//   res.sendStatus(200)
-// })
+router.delete('/', (req, res, next) => {
+  req.session = null
+  res.sendStatus(200)
+})
 
 module.exports = router

@@ -13,20 +13,6 @@ let authorize = function(req, res, next) {
   next()
 }
 
-// ===== GET ALL COMMENTS FOR ONE TRUCK =====
-// router.get('/', (req, res, next) => {
-//   console.log('in th get all comments for a truck function')
-//   knex('comments')
-//     .innerJoin('trucks', 'trucks.id', 'comments.truck_id')
-//     .then((comments) => {
-//       // console.log('get all comments then result is ', comments)
-//       res.json(comments)
-//     })
-//     .catch((err) => {
-//       next(err)
-//     })
-// })
-
 // ===== ADD A COMMENT ABOUT A TRUCK =====
 router.post('/', (req, res, next) => {
   console.log('in the Add a comment function, req.body is ', req.body)

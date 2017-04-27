@@ -3,14 +3,14 @@ var router = express.Router()
 var knex = require('../db/connection.js')
 var rp = require('request-promise')
 
-// ===== GET HEALTH INSPECTION DATA =====
-
 // ===== GET ALL TRUCKS =====
 router.get('/', function(req, res, next) {
-  // console.log("In the GET all trucks function")
   knex('trucks').select('*')
   .then(trucks => {
     res.render('trucks', { trucks })
+  })
+  .catch((err) => {
+    next(err)
   })
 })
 
@@ -36,7 +36,6 @@ router.get('/:id', function(req, res, next) {
   .select('business_id')
   .returning('*')
   .then((businessIdObj) => {
-    // console.log('bus id is now ', businessIdObj[0].business_id)
     const businessId = businessIdObj[0].business_id
     return businessId
   })
@@ -44,8 +43,6 @@ router.get('/:id', function(req, res, next) {
     let queryRoot = 'https://data.kingcounty.gov/resource/gkhn-e8mn.json\?'
     let queryParam = `Business_ID=${businessId}`
     let fullQuery = queryRoot + queryParam
-
-    // console.log('full query is ', fullQuery);
 
     // make the query
     const sodaQuery = rp({
@@ -68,9 +65,13 @@ router.get('/:id', function(req, res, next) {
       // console.log('monster truck ', monsterTruck)
       res.render('show_truck', {monsterTruck})
     })
-
+    .catch((err) => {
+      next(err)
+    })
   })
-
+  .catch((err) => {
+    next(err)
+  })
 })
 
 module.exports = router
