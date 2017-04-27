@@ -35,8 +35,8 @@ router.get('/', (req, res, next) => {
 
 // ===== CHECK TO SEE IF TRUCK IS A FAVORITE =====
 router.get('/check', (req, res, next) => {
-  // let { userId } = req.session
-  let userId = 5
+  let { userId } = req.session
+  // let userId = 5
   let query = req.query
   let queryId = req.query.id
 
@@ -59,8 +59,8 @@ router.get('/check', (req, res, next) => {
 
 // ====== ADD A TRUCK TO FAVORITES =====
 router.post('/', (req, res, next) => {
-  // let { userId } = req.session
-  let userId = 5
+  let { userId } = req.session
+  // let userId = 5
 
   let newFavorite = req.body
   let newFavId = req.body.truck_id
@@ -79,8 +79,8 @@ knex('favorites')
 
 // ====== DELETE A TRUCK FROM FAVORITES LIST =====
 router.delete('/:id', (req, res, next) => {
-  // let { userId } = req.session
-  let userId = 5
+  let { userId } = req.session
+  // let userId = 5
   let toBeRemoved = req.body
   let id = req.body.truck_id
 
