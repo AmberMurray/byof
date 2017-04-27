@@ -74,10 +74,8 @@ router.post('/', authorize, (req, res, next) => {
 // ====== DELETE A TRUCK FROM FAVORITES LIST =====
 router.delete('/:id', authorize, (req, res, next) => {
   let { userId } = req.session
-  console.log(userId);
-  console.log(req.params.id);
+
   let id = req.params.id
-  console.log(id);
 
   if (!userId) {
     return next({
@@ -86,7 +84,7 @@ router.delete('/:id', authorize, (req, res, next) => {
     })
   }
     knex('favorites')
-    .where('id', id)
+    .where('truck_id', id)
     .delete()
     .returning(['truck_id', 'user_id'])
     .then((result) => {

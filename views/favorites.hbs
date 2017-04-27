@@ -7,10 +7,10 @@
       <a class="favorite-list" href="/trucks/{{this.id}}"><h5>{{ this.name }}</h5></a>
       <div class="pic_box">
         <a href="/trucks/{{this.id}}"><img src="{{ this.truck_pic }}" alt="{{ this.name }}"></a>
-          <form method="POST" action="/favorites/{{this.id}}?_method=DELETE">
-            <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red"><i class="material-icons">thumb_down</i>
-            </button>
-          </form>
+        <form method="POST" action="/favorites/{{this.id}}?_method=DELETE">
+          <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red"><i class="material-icons">thumb_down</i>
+          </button>
+        </form>
       </div>
     </div>
     {{/each}}
