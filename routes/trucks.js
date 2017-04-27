@@ -22,7 +22,7 @@ router.get('/:id', function(req, res, next) {
   let truckComments = knex('comments').where('truck_id', truckId)
   .select('comments.review', 'comments.user_id')
   .innerJoin('users', 'users.id', 'comments.user_id')
-  .select('users.user_pic')
+  .select('users.user_pic', 'users.user_name')
 
   // let userAvatar = knex('trucks')
   // .innerJoin('comments', 'truck_id', 'trucks.id')
