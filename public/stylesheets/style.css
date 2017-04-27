@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px Arial, sans-serif;
-  letter-spacing: 0.16rem;
+  letter-spacing: 0.14rem;
   background-color: #D9D9D9;
 }
 
@@ -67,11 +67,11 @@ box-shadow: 0 1px 0 0 #2196f3;
 .lower {
   position:absolute;
   bottom:0;
-  width: inherit;
+  width: 100%;
   color:#fff;
   padding:10px 0;
   text-indent:5px;
-  background:rgba(91,105,195,0.6);
+  background:rgba(91,105,195,0.8);
 }
 
 .btn {
@@ -90,6 +90,16 @@ box-shadow: 0 1px 0 0 #2196f3;
 
 table {
   background-color: #FFF;
+  padding: 10px;
+}
+
+table thead th {
+  text-align: center;
+  padding: 30px;
+}
+
+table td {
+  padding: 30px;
 }
 
 table td a {
