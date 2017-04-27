@@ -6,6 +6,7 @@ var knex = require('../db/connection.js')
 // ===== AUTHORIZATION =====
 let authorize = function(req, res, next) {
   if (!req.session.userId) {
+
     return next({
       status: 401,
       message: 'Unauthorized'
@@ -19,7 +20,7 @@ router.get('/', authorize, (req, res, next) => {
 
   let { userId } = req.session
   // let userId = 9
-  console.log('userId is ', userId);
+  console.log('userId is ', userId)
 
   knex('favorites')
     .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
@@ -61,7 +62,7 @@ router.get('/check', authorize, (req, res, next) => {
 router.post('/', authorize, (req, res, next) => {
   let { userId } = req.session
   // let userId = 5
-  console.log('req.body is ', req.body);
+  console.log('req.body is ', req.body)
 
   let newFavorite = req.body
   let newFavId = req.body.truck_id
