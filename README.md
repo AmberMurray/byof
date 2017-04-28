@@ -1,13 +1,13 @@
 # B Y O F - Quarter 2 Project
 
-BYOF (Bring Your Own Food) is an app that connects your favorite bars, that let you bring in your own grub 👍🏼, with your favorite food truck, making every day the best day ever! Check it out [here](https://byof.herokuapp.com/)!
+BYOF (Bring Your Own Food) is an app that connects your favorite bars, that let you bring in your own grub 👍🏼, with your favorite food truck, making every day the best day ever!
 
 Check it out here: https://byof.herokuapp.com/
 
 ![](/md-images/renote-landing.gif)
 
 ## Features
-BYOF was designed a mobile-friendly. Everyone is able to access to the site data, which includes truck-to-bar schedules, food safety ratings for each truck, and user reviews of their feastnig experience. Users who register receive the added benefit of being able to save food trucks to their favorites list and to leave reviews about their food truck adventures. 
+BYOF was designed a mobile-friendly. Everyone is able to access to the site data, which includes truck-to-bar schedules, food safety ratings for each truck, and user reviews of their feastnig experience. Users who register receive the added benefit of being able to save food trucks to their favorites list and to leave reviews about their food truck adventures.
 
 ### Notes
 ![](/md-images/renote-notes.gif)
