@@ -34,29 +34,10 @@ Save your favorite mobile meals in one place. Give 'em a thumbs down if your tas
 
 # Technologies
 
-| Front End | Back End | Database |
-| ___ | ___ | ___ |
-| Materialize | Express | PostgreSQL |
-| HTML5 | Node | Knex.js |
-| CSS3 | Handlebars | Socrata API for King County |
-| JavaScript| | |
-
-
 | Front End  | Back End | Database |
 | ------------- | ------------- |------------- |
 | Materialize  | Express  | PostgreSQL  |
 | HTML5  | Node  | Knex.js |
 | CSS3 | Handlebars  | Socrata API |
 | JavaScript  |   |  |
-
-* PostgreSQL
-* Knex.js
-* Socrata API for King County
-
-* Express
-* Node
-* Handlebars
-
-* The Big 3: HTML5, CSS3, JavaScript
-* Materialize
-* Heroku
+| Heroku |   |  |
