@@ -38,7 +38,7 @@ a {
   margin-left: 20px;
 }
 
-textarea .comments {
+textarea {
   border:  1px solid #9e9e9e;
   background-color: #fff;
   height: 200px;
@@ -83,7 +83,7 @@ box-shadow: 0 1px 0 0 #2196f3;
   background:rgba(255,255,0,0.8);
 }
 
-.addfav {
+.add-fav {
   display: inline-block;
 }
 
