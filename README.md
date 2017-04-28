@@ -42,10 +42,12 @@ Save your favorite mobile meals in one place. Give 'em a thumbs down if your tas
 | JavaScript| | |
 
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Front End  | Back End | Database |
+| ------------- | ------------- |------------- |
+| Materialize  | Express  | PostgreSQL  |
+| HTML5  | Node  | Knex.js |
+| CSS3 | Handlebars  | Socrata API |
+| JavaScript  |   |  |
 
 * PostgreSQL
 * Knex.js
