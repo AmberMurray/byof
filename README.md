@@ -1,6 +1,6 @@
 # B Y O F - Quarter 2 Project
 
-This is the RE:Note repository, it is a project designed to target competent users of computers, and allow for a seamless and quick experience in note-taking. Visit it [here](https://byof.herokuapp.com/).
+BYOF (Bring Your Own Food) is an app that connects your favorite bars, which let you bring in your own grub, with your favorite food truck. Check it out [here](https://byof.herokuapp.com/).
 
 ![](/md-images/renote-landing.gif)
 
@@ -17,14 +17,18 @@ RE:Note is a web-based markdown note-taking app. Users can create and organize f
 ![](/md-images/renote-upload.gif)
 
 ## Technologies
+
 * PostgreSQL
 * Knex.js
+* Socrata API for King County
+
 * Express
 * Node
-* jQuery
+* Handlebars
+
+* The Big 3: HTML5, CSS3, JavaScript
 * Materialize
-* [Scroll Magic](http://scrollmagic.io/)
-* [Simple MDE](https://simplemde.com/)
+* Heroku
 
 ## Styling
 
