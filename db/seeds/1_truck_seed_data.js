@@ -131,6 +131,24 @@ exports.seed = function(knex) {
         safety_url: '',
         truck_pic: 'https://thesquarepdx.org/wp-content/uploads/2017/01/VooDoo-Web.jpg',
         business_id: 'PR0082252'
+      },
+      {
+        id: 15,
+        name: 'Maximus Minimus',
+        food: 'American',
+        safety: 3,
+        safety_url: '',
+        truck_pic: 'https://s-media-cache-ak0.pinimg.com/736x/4b/48/d0/4b48d03e9ba64ba1bdd3b47f81afa300.jpg',
+        business_id: 'PR0079302'
+      },
+      {
+        id: 16,
+        name: 'Galaxy Donuts',
+        food: 'American',
+        safety: 1,
+        safety_url: '',
+        truck_pic: 'http://fun4raleighkids.com/media/com_mtree/images/listings/s/2083.jpg',
+        business_id: 'PR0084317'
       }
       ])
     })

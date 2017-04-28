@@ -9,14 +9,14 @@ exports.seed = function(knex, Promise) {
       {
         id: 1,
         user_id: 5,
-        truck_id: 2,
+        truck_id: 5,
         review: 'I AM SHOUTY MCSHOUTSTER.'
       },
       {
         id: 2,
         user_id: 4,
-        truck_id: 1,
-        review: 'I ambushed you with a cup of coffee!'
+        truck_id: 4,
+        review: 'I don’t know what could have saved limp, dispiriting yam dumplings, but it definitely was not a lukewarm matsutake mushroom bouillon as murky and appealing as bong water.'
       },
       {
         id: 3,
@@ -26,167 +26,275 @@ exports.seed = function(knex, Promise) {
       },
       {
         id: 4,
-        user_id: 2,
+        user_id: 1,
         truck_id: 3,
         review: 'I LIKE TO WRITE IN ALL CAPS.'
       },
       {
         id: 5,
-        user_id: 1,
+        user_id: 2,
         truck_id: 5,
-        review: 'Draw again. Draw it again. You\'re the ace field man. Draw it again. It\'s a simple diagram. Just draw it again. Draw what you saw. Draw it again! Draw it again!.'
+        review: 'I love jujubes marshmallow wafer gingerbread pie candy canes. Jujubes pudding lollipop dessert. Sugar plum chupa chups I love chocolate bonbon pie gingerbread.'
       },
       {
         id: 6,
-        user_id: 5,
+        user_id: 3,
         truck_id: 5,
-        review: 'This atmosphere rocks and the beers are tasty.'
+        review: 'It would be generous to say that the food is adequate but overpriced.'
       },
       {
         id: 7,
         user_id: 4,
         truck_id: 11,
-        review: 'I hurt somebody\'s feelings once.'
+        review: 'I wouldn’t wish a fire on anybody’s business, but at least if we had been evacuated by a false alarm I wouldn’t have had to eat their food.'
       },
       {
         id: 8,
-        user_id: 3,
-        truck_id: 9,
-        review: 'What\'s the color of the boathouse at Hereford?.'
+        user_id: 5,
+        truck_id: 1,
+        review: 'The food is mostly serviceable, minus a dry and beefy-tasting lamb burger, a sad salmon tartare prepared without an ounce of love, and the desserts, which are uniformly bad.'
       },
       {
         id: 9,
-        user_id: 5,
+        user_id: 6,
         truck_id: 9,
-        review: 'Draw again. Draw it again. You\'re the ace field man. Draw it again. It\'s a simple diagram. Just draw it again. Draw what you saw. Draw it again! Draw it again!'
+        review: 'The fries were like overcooked woody batons.'
       },
       {
         id: 10,
-        user_id: 4,
+        user_id: 7,
         truck_id: 10,
-        review: 'Umm...who puts ketchup on pancakes? That\'s just nasty.'
+        review: 'Umm...who puts ketchup on pancakes? That is just nasty.'
       },
       {
         id: 11,
-        user_id: 4,
+        user_id: 8,
         truck_id: 12,
-        review: 'Completely synthesize principle-centered information after ethical communities. Efficiently innovate open-source infrastructures via inexpensive materials.'
-      },{
+        review: 'The risotto with scallops is where hope goes to die.'
+      },
+      {
         id: 12,
-        user_id: 4,
+        user_id: 10,
         truck_id: 7,
-        review: 'I liked Donut Burger better.'
-      },{
+        review: 'They ran-over my foot, but the food is tasty.'
+      },
+      {
         id: 13,
-        user_id: 12,
+        user_id: 10,
         truck_id: 8,
         review: 'My cousin owns this, so eat there.'
-      },{
+      },
+      {
         id: 14,
-        user_id: 7,
+        user_id: 11,
         truck_id: 8,
-        review: 'Uniquely matrix economically sound value through cooperative technology. Competently parallel task fully researched data and enterprise process improvements.'
-      },{
+        review: 'Fruitcake dragée tootsie roll muffin tiramisu. Soufflé pudding macaroon bonbon cake dragée soufflé bear claw dragée. Danish cake chupa chups donut sesame snaps.'
+      },
+      {
         id: 15,
-        user_id: 6,
+        user_id: 12,
         truck_id: 10,
         review: 'I will never eat here again.'
-      },{
+      },
+      {
         id: 16,
-        user_id: 8,
-        truck_id: 9,
+        user_id: 13,
+        truck_id: 12,
         review: 'Expensive but good.'
-      },{
+      },
+      {
         id: 17,
-        user_id: 4,
+        user_id: 14,
         truck_id: 11,
-        review: 'Globally network focused materials vis-a-vis cost effective manufactured products.'
-      },{
+        review: 'Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.'
+      },
+      {
         id: 18,
-        user_id: 11,
+        user_id: 15,
         truck_id: 6,
-        review: 'Rapaciously seize adaptive infomediaries and user-centric intellectual capital.'
-      },{
+        review: 'The seafood risotto was as mushy as wallpaper paste.'
+      },
+      {
         id: 19,
-        user_id: 11,
+        user_id: 16,
         truck_id: 9,
-        review: 'Whenever there is any doubt, there is no doubt. That\'s the first thing they teach you. This is comment 10.'
-      },{
+        review: 'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.'
+      },
+      {
         id: 20,
-        user_id: 8,
+        user_id: 17,
         truck_id: 8,
-        review: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.'
-      },{
+        review: 'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.'
+      },
+      {
         id: 21,
-        user_id: 7,
-        truck_id: 7,
-        review: 'Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.'
-      },{
+        user_id: 18,
+        truck_id: 16,
+        review: 'IPie candy canes carrot cake tart brownie liquorice marzipan. Liquorice marshmallow oat cake. Donut wafer donut. Tootsie roll wafer brownie brownie biscuit.'
+      },
+      {
         id: 22,
-        user_id: 9,
-        truck_id: 6,
-        review: 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line'
+        user_id: 19,
+        truck_id: 15,
+        review: 'I was expecting it to be better.'
       },
       {
         id: 23,
-        user_id: 11,
+        user_id: 20,
         truck_id: 11,
-        review: 'Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.'
+        review: 'Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock yarrow chickpea dandelion sorrel courgette turnip greens tigernut soybean radish artichoke wattle seed endive groundnut broccoli arugula.'
       },
       {
         id: 24,
-        user_id: 4,
+        user_id: 21,
         truck_id: 6,
-        review: 'Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.'
+        review: 'Tri-tip picanha jowl cupim pork chop. Capicola alcatra fatback, drumstick pork spare ribs landjaeger shoulder venison bacon filet mignon. Meatloaf chicken sausage bresaola boudin picanha porchetta.'
       },
       {
         id: 25,
-        user_id: 6,
+        user_id: 22,
         truck_id: 7,
         review: 'No. Just no.'
       },
       {
         id: 26,
-        user_id: 7,
+        user_id: 23,
         truck_id: 8,
-        review: 'Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.'
+        review: 'Topping carrot cake danish marshmallow. Croissant cupcake cookie pastry tart. Fruitcake toffee fruitcake topping pie gummies. Jujubes liquorice caramels croissant. Sweet biscuit tootsie roll sesame snaps chupa chups brownie candy. Candy cotton candy chupa chups oat cake. Gummies biscuit muffin liquorice topping dessert cupcake. Jelly beans toffee lemon drops candy sugar plum chocolate liquorice cotton candy fruitcake.'
       },
       {
         id: 27,
-        user_id: 8,
+        user_id: 24,
         truck_id: 9,
         review: 'Negative, bossy meat creature.'
       },
       {
         id: 28,
-        user_id: 9,
+        user_id: 25,
         truck_id: 10,
         review: 'Yeah. No.'
       },
       {
         id: 29,
-        user_id: 10,
+        user_id: 26,
         truck_id: 11,
-        review: 'Efficiently myocardinate market-driven innovation via open-source alignments. Dramatically engage high-payoff infomediaries rather than client-centric imperatives. Efficiently initiate world-class applications after client-centric infomediaries.'
+        review: 'Ham hock andouille tenderloin hamburger sirloin doner jowl. Flank pork loin pork belly burgdoggen. Pastrami t-bone tongue cupim ball tip, porchetta corned beef chuck andouille ham hock venison ribeye ham.'
       },
       {
         id: 30,
-        user_id: 11,
+        user_id: 27,
         truck_id: 12,
         review: 'Nom nom nom.'
       },
       {
         id: 31,
-        user_id: 12,
+        user_id: 28,
         truck_id: 14,
-        review: 'Enthusiastically engage fully tested process improvements before top-line platforms.'
+        review: 'Gummi bears icing bonbon. Candy canes cheesecake chocolate chocolate cake pudding biscuit chocolate bar cake sesame snaps. Danish oat cake gummies. Marshmallow toffee brownie topping carrot cake jelly-o dessert tiramisu. Sugar plum tart chupa chups. Ice cream tart wafer. Pudding dessert lollipop. Bonbon cookie apple pie. Gummi bears powder macaroon.'
       },
       {
         id: 32,
-        user_id: 13,
+        user_id: 29,
         truck_id: 13,
-        review: 'Soothe us with sweet lies.'
+        review: 'Bonbon cookie gingerbread fruitcake wafer croissant gingerbread sweet chocolate cake. Powder pie bonbon icing dragée jujubes. Soufflé jelly-o cupcake biscuit croissant caramels muffin. Tiramisu fruitcake chocolate dragée bonbon wafer soufflé candy canes.'
+      },
+      {
+        id: 33,
+        user_id: 9,
+        truck_id: 1,
+        review: 'I liked Donut Burger better.'
+      },
+      {
+        id: 34,
+        user_id: 9,
+        truck_id: 2,
+        review: 'I liked Donut Burger better.'
+      },
+      {
+        id: 35,
+        user_id: 14,
+        truck_id: 3,
+        review: 'I liked Donut Burger better.'
+      },
+      {
+        id: 36,
+        user_id: 9,
+        truck_id: 13,
+        review: 'I liked Donut Burger better.'
+      },
+      {
+        id: 37,
+        user_id: 9,
+        truck_id: 5,
+        review: 'I liked Donut Burger better.'
+      },
+      {
+        id: 38,
+        user_id: 9,
+        truck_id: 6,
+        review: 'I liked Donut Burger better.'
+      },
+      {
+        id: 39,
+        user_id: 9,
+        truck_id: 7,
+        review: 'I liked Donut Burger better.'
+      },
+      {
+        id: 40,
+        user_id: 9,
+        truck_id: 8,
+        review: 'I liked Donut Burger better.'
+      },
+      {
+        id: 41,
+        user_id: 9,
+        truck_id: 1,
+        review: 'Check out the onion rings - out of this world!'
+      },
+      {
+        id: 42,
+        user_id: 13,
+        truck_id: 2,
+        review: 'Fruitcake dragée tootsie roll muffin tiramisu. Soufflé pudding macaroon bonbon cake dragée soufflé bear claw dragée. Danish cake chupa chups donut sesame snaps.'
+      },
+      {
+        id: 43,
+        user_id: 9,
+        truck_id: 3,
+        review: 'Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.'
+      },
+      {
+        id: 44,
+        user_id: 9,
+        truck_id: 4,
+        review: 'Tri-tip picanha jowl cupim pork chop. Capicola alcatra fatback, drumstick pork spare ribs landjaeger shoulder venison bacon filet mignon. Meatloaf chicken sausage bresaola boudin picanha porchetta.'
+      },
+      {
+        id: 45,
+        user_id: 3,
+        truck_id: 13,
+        review: 'Gummi bears icing bonbon. Candy canes cheesecake chocolate chocolate cake pudding biscuit chocolate bar cake sesame snaps. Danish oat cake gummies. Marshmallow toffee brownie topping carrot cake jelly-o dessert tiramisu. Sugar plum tart chupa chups. Ice cream tart wafer. Pudding dessert lollipop. Bonbon cookie apple pie. Gummi bears powder macaroon.'
+      },
+      {
+        id: 46,
+        user_id: 20,
+        truck_id: 14,
+        review: 'Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock yarrow chickpea dandelion sorrel courgette turnip greens tigernut soybean radish artichoke wattle seed endive groundnut broccoli arugula.'
+      },
+      {
+        id: 47,
+        user_id: 11,
+        truck_id: 14,
+        review: 'FAIL.'
+      },
+      {
+        id: 48,
+        user_id: 15,
+        truck_id: 14,
+        review: 'I don’t know what could have saved limp, dispiriting yam dumplings, but it definitely was not a lukewarm matsutake mushroom bouillon as murky and appealing as bong water.'
       }
+
     ])
   })
   .then (() => {

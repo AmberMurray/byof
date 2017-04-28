@@ -126,8 +126,18 @@ exports.seed = function(knex, Promise) {
         bar_pic: 'http://www.thesuntavern.co.uk/wp-content/uploads/2015/05/the-sun-tavern-gallery-05-300x300.jpg',
         beer: true,
         liquor: true
+      },
+      {
+        id: 12,
+        name: 'Flat Stick Pub',
+        address: '240 2nd Ave S',
+        city: 'Seattle',
+        state: 'WA',
+        zip: 98104,
+        bar_pic: 'https://s3-media2.fl.yelpcdn.com/ephoto/GdGrWAflQELtCCp-3hirWg/300s.jpg',
+        beer: true,
+        liquor: false
       }
-
     ])
   })
   .then (() => {
