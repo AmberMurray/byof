@@ -3,14 +3,14 @@
   <div class="row"></div>
   <div class="row">
     <div class="col m6 offset-m3 center-align">
-      <h3>{{monsterTruck.truckDeets.name}}</h3>
       <div class="card">
         <div class="card-image">
           <img class="responsive-img" src="{{ monsterTruck.truckDeets.truck_pic }}"alt="{{ monsterTruck.truckDeets.name }}">
-          <form method="POST" action="/favorites">
-            <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red"><i class="material-icons">favorite</i>
+          <h3>{{monsterTruck.truckDeets.name}}
+          <form class="addfav" method="POST" action="/favorites">
+            <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red right"><i class="material-icons" >favorite</i>
             </button>
-          </form>
+          </form></h3>
         </div>
       </div>
     </div>

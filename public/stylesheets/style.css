@@ -46,10 +46,11 @@ textarea .comments {
   padding-bottom: 20px;
 
 }
-/*.input-field textarea[class=materialize-textarea]:focus {
+
+.input-field textarea[class=materialize-textarea]:focus {
 border-bottom: 1px solid #D9D9D9;
 box-shadow: 0 1px 0 0 #2196f3;
-}*/
+}
 
 .col.pic_box {
   margin-bottom: 20px;
@@ -72,8 +73,22 @@ box-shadow: 0 1px 0 0 #2196f3;
   background:rgba(91,105,195,0.8);
 }
 
-.favorite-list a {
-  color: #5c6bc0
+.lower-favs h5 {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  color:#5c6bc0;
+  padding:10px 0;
+  text-indent:5px;
+  background:rgba(255,255,0,0.8);
+}
+
+.addfav {
+  display: inline-block;
+}
+
+.delete-fav {
+  display: inline-block;
 }
 
 .btn {
