@@ -14,7 +14,7 @@ BYOF is designed to be a mobile-friendly, food and drink finder which features t
 # Food Truck Info
 See all the important details for a particular truck in one place.  Each bar listed in the "Bar's I'm Visiting Today" table is a link to a local watering hole. Read the opinion of other food truck foodies and contribute your two cents.
 
-![](/public/md-media/food-truck-info.mov)
+![](/public/md-media/food-truck-info.gif)
 
 
 
