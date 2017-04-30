@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== 'production' && !process.env.IS_BUILD) {
-  require('dotenv').config();
+  require('dotenv').config()
 }
 
 var express = require('express')
@@ -20,7 +20,7 @@ var rp = require('request-promise')
 var cookieSession = require('cookie-session')
 var session = require('./routes/session')
 var app = express()
-app.enable('trust proxy');
+app.enable('trust proxy')
 
 app.disable('x-powered-by')
 

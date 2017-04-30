@@ -22,8 +22,9 @@ router.get('/', (req, res, next) => {
       message: 'Please enter a valid password.'
     })
   }
+  
+  let user
 
-  let user;
   knex('users')
   .where('user_email', email)
   .first()
