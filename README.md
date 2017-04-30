@@ -7,7 +7,7 @@ Check it out here: https://byof.herokuapp.com/
 
 # Features
 
-BYOF is designed to be a mobile-friendly, food and drink finder which features truck-to-bar schedules, food safety ratings, and user reviews of their feasting experience. Users who register receive the added benefit of being able to save food trucks to their favorites list and to leave reviews about their food truck adventures.
+BYOF is designed to be an on-the go, food-and-drink finder which features truck-to-bar schedules, food safety ratings, and user reviews of their feasting experience. Users who register receive the added benefit of being able to save food trucks to their favorites list and to leave reviews about their food truck adventures.
 
 
 
@@ -19,7 +19,7 @@ See all the important details for a particular truck in one place.  Each bar lis
 
 
 # Bar Info
-Find out if you can only get a hoppy IPA or if a tequila sunrise is in your future!
+Find out if you can only get a hoppy IPA or if Johnny, Jack, and Jim will be joining you for dinner!
 
 ![](/public/md-media/bar-info.png)
 
@@ -28,7 +28,7 @@ Find out if you can only get a hoppy IPA or if a tequila sunrise is in your futu
 # Favorite Food Trucks
 Save your favorite mobile meals in one place. Give 'em a thumbs down if your tastebuds disagree.
 
-![](/public/md-media/food-truck-favorites.png)
+![](/public/md-media/favorites-food-trucks.png)
 
 
 
