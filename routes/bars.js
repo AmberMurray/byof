@@ -3,8 +3,7 @@ var router = express.Router();
 var knex = require('../db/connection.js')
 
 // ===== GET ALL BARS =====
-  router.get('/', function(req, res, next) {
-  console.log("In the GET all bars function")
+router.get('/', function(req, res, next) {
   knex('bars').select('*')
   .then(bars => {
     res.render('bars', { bars })
@@ -15,15 +14,13 @@ var knex = require('../db/connection.js')
 })
 
 // ===== GET ONE BAR =====
-  router.get('/:id', function(req, res, next) {
-  console.log("In the GET one bar function")
+router.get('/:id', function(req, res, next) {
   var id = req.params.id
   knex('bars')
   .select('*')
   .where('id', id)
   .first()
   .then(bar => {
-    console.log('bar is ', bar)
     res.render('show_bar', { bar })
   })
   .catch((err) => {

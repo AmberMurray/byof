@@ -5,7 +5,6 @@ var knex = require('../db/connection.js')
 
 // ===== AUTHORIZATION =====
 let authorize = function(req, res, next) {
-  console.log(req.session.userId);
   if (!req.session.userId) {
     res.redirect('/login')
     // return next({
@@ -19,17 +18,16 @@ let authorize = function(req, res, next) {
 // ===== GET FAVORITE TRUCKS =====
 router.get('/', authorize, (req, res, next) => {
   let { userId } = req.session
-  console.log(req.session);
 
   knex('favorites')
-    .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
-    .where('favorites.user_id', userId)
-    .then((favorites) => {
-      res.render('favorites', { favorites })
-    })
-    .catch((err) => {
-      next(err)
-    })
+  .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
+  .where('favorites.user_id', userId)
+  .then((favorites) => {
+    res.render('favorites', { favorites })
+  })
+  .catch((err) => {
+    next(err)
+  })
 })
 
 // ===== CHECK TO SEE IF TRUCK IS A FAVORITE =====
@@ -39,20 +37,20 @@ router.get('/check', authorize, (req, res, next) => {
   let queryId = req.query.id
 
   knex('favorites')
-    .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
-    .where(query)
-    .orderBy('trucks.name', 'food')
-    .then((favorite) => {
-      if (favorite == 0) {
-        res.status(200).send(false)
-      }
-      else {
-        res.status(200).send(true)
-      }
-    })
-    .catch((err) => {
-      next(err)
-    })
+  .innerJoin('trucks', 'trucks.id', 'favorites.truck_id')
+  .where(query)
+  .orderBy('trucks.name', 'food')
+  .then((favorite) => {
+    if (favorite == 0) {
+      res.status(200).send(false)
+    }
+    else {
+      res.status(200).send(true)
+    }
+  })
+  .catch((err) => {
+    next(err)
+  })
 })
 
 // ====== ADD A TRUCK TO FAVORITES =====
@@ -84,14 +82,14 @@ router.delete('/:id', authorize, (req, res, next) => {
       message: 'Unauthorized'
     })
   }
-    knex('favorites')
-    .where('truck_id', id)
-    .delete()
-    .returning(['truck_id', 'user_id'])
-    .then((result) => {
+  knex('favorites')
+  .where('truck_id', id)
+  .delete()
+  .returning(['truck_id', 'user_id'])
+  .then((result) => {
 
-      res.redirect('/favorites')
-    })
+    res.redirect('/favorites')
+  })
 })
 
 module.exports = router

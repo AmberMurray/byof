@@ -45,7 +45,6 @@ router.get('/:id', function(req, res, next) {
     let queryRoot = 'https://data.kingcounty.gov/resource/gkhn-e8mn.json\?'
     let queryParam = `Business_ID=${businessId}`
     let fullQuery = queryRoot + queryParam
-    console.log('fullquery is ', fullQuery)
 
     // make the query
     const sodaQuery = rp({
@@ -64,8 +63,6 @@ router.get('/:id', function(req, res, next) {
         inspectionResult: results[3][0].inspection_result,
         inspectionDate: uglyDate.slice(0, 10)
       }
-      console.log('inspectionDate is ', monsterTruck.inspectionDate)
-
       res.render('show_truck', {monsterTruck})
     })
     .catch((err) => {

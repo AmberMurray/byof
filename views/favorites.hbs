@@ -7,9 +7,11 @@
         <a href="/trucks/{{this.id}}"><img src="{{ this.truck_pic }}" alt="{{ this.name }}"></a>
         <div class="lower-favs">
           <a class="favorite-list" href="/trucks/{{this.id}}"><h5>{{ this.name }}
-          <form method="POST" class="delete-fav" action="/favorites/{{this.id}}?_method=DELETE">
-          <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red thumb-down"><i class="material-icons">thumb_down</i>
-        </button></form></h5></a>
+            <form method="POST" class="delete-fav" action="/favorites/{{this.id}}?_method=DELETE">
+              <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red thumb-down"><i class="material-icons">thumb_down</i>
+              </button>
+            </form>
+          </h5></a>
         </div>
       </div>
     </div>

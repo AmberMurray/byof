@@ -2,11 +2,11 @@
   <div class="row"></div>
   <div class="row"></div>
   <div class="row">
-    <div class="col m6 offset-m3 center-align">
-      <div class="card">
-        <div class="card-image">
-          <img class="responsive-img" src="{{ monsterTruck.truckDeets.truck_pic }}"alt="{{ monsterTruck.truckDeets.name }}">
-          <h3>{{monsterTruck.truckDeets.name}}
+  <div class="col m6 offset-m3 center-align">
+    <div class="card">
+      <div class="card-image">
+        <img class="responsive-img" src="{{ monsterTruck.truckDeets.truck_pic }}"alt="{{ monsterTruck.truckDeets.name }}">
+        <h3>{{monsterTruck.truckDeets.name}}
           <form class="add-fav" method="POST" action="/favorites">
             <button type="submit" name="truck_id" value="{{monsterTruck.truckDeets.id}}" class="btn-floating waves-effect waves-light red right"><i class="material-icons" >favorite</i>
             </button>
@@ -28,20 +28,19 @@
               <td>{{ monsterTruck.truckDeets.food }}</td>
             </tr>
             <tr>
-            <td>Last Inspection</td>
-            <td class="red-text">{{ monsterTruck.inspectionDate }}</td>
-          </tr>
-          <tr>
-            <td >Inspection Result</td>
-            <td class="red-text">{{ monsterTruck.inspectionResult }}</td>
-          </tr>
-        </tbody>
-      </table>
+              <td>Last Inspection</td>
+              <td class="red-text">{{ monsterTruck.inspectionDate }}</td>
+            </tr>
+            <tr>
+              <td >Inspection Result</td>
+              <td class="red-text">{{ monsterTruck.inspectionResult }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
 </section>
-
 
 <div class="container">
   <div class="row">
