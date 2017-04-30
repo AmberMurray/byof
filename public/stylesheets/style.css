@@ -123,14 +123,14 @@ table td a {
   color: #000;
 }
 
+td img {
+  height: 50px;
+  width: 50px;
+}
+
 .register {
   background-color: #FFF;
 }
 input::placeholder {
   color: #a0a4a5;
-}
-
-td img {
-  height: 50px;
-  width: 50px;
 }
