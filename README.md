@@ -1,8 +1,8 @@
 # B Y O F
 
-BYOF (Bring Your Own Food) is an app that connects your favorite bars where you bring your own grub, with your favorite food truck, making every day the best day ever!
+BYOF (Bring Your Own Food) is an app created by Amber Murray and Kay Krewson that connects your favorite bars where you bring your own grub, with your favorite food truck, making every day the best day ever!
 
-Check it out here: https://byof.herokuapp.com/
+Check it out here: https://byof.herokuapp.com/ or fork and clone this repo. Once you have it on your machine, run npm install to download all the food truck goodness. Enjoy!
 
 
 # Features
